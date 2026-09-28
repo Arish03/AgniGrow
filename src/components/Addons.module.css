@@ -1,0 +1,52 @@
+.header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.gridVis .chip {
+  animation: fadeInUp var(--dur-slow) var(--ease-out) both;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 0.75rem 1.4rem;
+  background: var(--bg-card);
+  border: 1px solid var(--cream-10);
+  border-radius: var(--radius-full);
+  transition: all var(--dur-fast) var(--ease-out);
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.chip:hover {
+  border-color: rgba(255,90,31,0.3);
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(255,90,31,0.1);
+}
+
+.chipIcon {
+  font-size: 1.2rem;
+}
+
+.chipLabel {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--cream-60);
+}
+
+.chip:hover .chipLabel {
+  color: var(--cream);
+}
