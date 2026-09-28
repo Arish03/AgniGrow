@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="100%" height="100%">
+  <rect width="160" height="160" rx="36" fill="#0b0807" />
+  <g transform="translate(10, 30)">
+    <!-- Crossbar-free geometric A -->
+    <path d="M0 100 58 0h28l58 100h-36L72 39 36 100H0Z" fill="#F4EEE5" />
+    <!-- Ember-orange square -->
+    <rect x="111" y="67" width="33" height="33" rx="3" fill="#FF541F" />
+  </g>
+</svg>
