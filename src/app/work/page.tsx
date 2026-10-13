@@ -4,9 +4,12 @@ import Portfolio from "@/components/Portfolio";
 import Testimonials from "@/components/Testimonials";
 
 export const metadata: Metadata = {
-  title: "Selected Work & Case Studies | AgniGrow",
+  title: "Case Studies & Selected Work",
   description:
     "Explore our featured digital projects, high-converting websites, WhatsApp CRM setups, and custom business software shipped for clients in Tamil Nadu and worldwide.",
+  alternates: {
+    canonical: "/work",
+  },
 };
 
 export default function WorkPage() {

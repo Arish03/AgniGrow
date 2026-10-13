@@ -3,9 +3,12 @@ import Contact from "@/components/Contact";
 import FAQ from "@/components/FAQ";
 
 export const metadata: Metadata = {
-  title: "Contact & Project Inquiries | AgniGrow",
+  title: "Contact & Project Inquiries",
   description:
     "Get in touch with AgniGrow in Vaniyambadi, Tamil Nadu. Book a discovery call, chat with our technical lead on WhatsApp, or request an official quote.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {

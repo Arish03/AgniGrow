@@ -4,9 +4,12 @@ import AgniLogo from "@/components/AgniLogo";
 import AnimatedStat from "@/components/AnimatedStat";
 
 export const metadata: Metadata = {
-  title: "About Us | AgniGrow — Vaniyambadi, Tamil Nadu",
+  title: "About Us",
   description:
     "Learn about AgniGrow, our founding mission, engineering values, and how we empower local and global businesses with world-class digital systems.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 const VALUES = [

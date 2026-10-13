@@ -20,7 +20,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://agnigrow.in"),
-  title: "AgniGrow | Websites, Branding & Automation in Vaniyambadi",
+  title: {
+    default: "AgniGrow | Websites, Branding & WhatsApp Automation in Vaniyambadi",
+    template: "%s | AgniGrow",
+  },
   description:
     "AgniGrow is a premium digital agency based in Vaniyambadi, Tamil Nadu. We build modern, high-converting websites, brand identities, WhatsApp automation, and custom software systems.",
   keywords: [
@@ -39,6 +42,18 @@ export const metadata: Metadata = {
     { name: "AgniGrow", url: "https://agnigrow.in" },
   ],
   creator: "Arish Srinivasan",
+  publisher: "AgniGrow",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "AgniGrow — Websites, Branding & Automation",
     description:
@@ -49,7 +64,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.svg",
         width: 1200,
         height: 630,
         alt: "AgniGrow — Websites, Branding & Automation in Vaniyambadi",
@@ -58,10 +73,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AgniGrow",
+    title: "AgniGrow — Websites, Branding & Automation",
     description:
       "Websites, branding, and automation crafted to ignite business growth.",
-    images: ["/og-image.png"],
+    images: ["/og-image.svg"],
   },
   alternates: {
     canonical: "https://agnigrow.in",

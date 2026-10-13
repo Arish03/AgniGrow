@@ -4,9 +4,12 @@ import Addons from "@/components/Addons";
 import Process from "@/components/Process";
 
 export const metadata: Metadata = {
-  title: "Digital Services & Capabilities | AgniGrow",
+  title: "Services & Capabilities",
   description:
     "Explore our complete range of digital services: high-converting web development, brand identity, WhatsApp CRM automation, e-commerce stores, and custom software systems in Vaniyambadi.",
+  alternates: {
+    canonical: "/services",
+  },
 };
 
 const DETAILED_SERVICES = [
