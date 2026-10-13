@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+import { trackWhatsAppClick } from "@/lib/analytics";
+
 export default function WhatsAppButton() {
   const [showTooltip, setShowTooltip] = useState(false);
 
@@ -26,10 +28,11 @@ export default function WhatsAppButton() {
 
       {/* Floating Action Button */}
       <motion.a
-        href="https://wa.me/919876543210?text=Hi%20Agni%20team,%20I'd%20like%20to%20discuss%20a%20project%20for%20my%20business."
+        href="https://wa.me/917200146914?text=Hi%20AgniGrow%20team,%20I'd%20like%20to%20discuss%20a%20project%20for%20my%20business."
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
+        onClick={() => trackWhatsAppClick("floating_button")}
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
         whileHover={{ scale: 1.08 }}

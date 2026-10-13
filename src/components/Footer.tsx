@@ -40,25 +40,25 @@ export default function Footer() {
         {/* Brand */}
         <div className="flex flex-col gap-4">
           <Link href="/" aria-label="Agni home">
-            <AgniLogo size={32} showText={true} />
+            <AgniLogo width={160} />
           </Link>
           <p className="text-sm text-cream-60 max-w-[280px] leading-relaxed">
             Digital experiences that ignite growth. High-converting websites, WhatsApp CRM automation, and bespoke software for ambitious businesses.
           </p>
           <div className="flex items-center gap-3 pt-2">
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/917200146914"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs px-3 py-1.5 rounded-lg border border-emerald-500/30 text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 transition-colors"
             >
-              💬 +91 98765 43210
+              💬 +91 72001 46914
             </a>
             <a
-              href="mailto:hello@agni.in"
+              href="mailto:info@agnigrow.in"
               className="text-xs px-3 py-1.5 rounded-lg border border-cream-20 text-cream-60 hover:text-cream hover:border-ember transition-colors"
             >
-              ✉️ hello@agni.in
+              ✉️ info@agnigrow.in
             </a>
           </div>
         </div>
@@ -123,7 +123,7 @@ export default function Footer() {
       <div className="border-t border-cream-05 py-6">
         <div className="max-w-[1280px] mx-auto px-6 md:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-cream-40 text-center sm:text-left">
-            © {year} Agni Digital Experience. All rights reserved.
+            © {year} AgniGrow. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-xs text-cream-40">
             <Link href="/services" className="hover:text-cream">Services</Link>

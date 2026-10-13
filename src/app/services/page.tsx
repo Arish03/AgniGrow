@@ -4,7 +4,7 @@ import Addons from "@/components/Addons";
 import Process from "@/components/Process";
 
 export const metadata: Metadata = {
-  title: "Digital Services & Capabilities | Agni Digital Experience",
+  title: "Digital Services & Capabilities | AgniGrow",
   description:
     "Explore our complete range of digital services: high-converting web development, brand identity, WhatsApp CRM automation, e-commerce stores, and custom software systems in Vaniyambadi.",
 };
@@ -260,7 +260,7 @@ export default function ServicesPage() {
                 Start a Conversation
               </Link>
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/917200146914"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-3.5 rounded-full font-display font-bold text-sm border border-emerald-500/40 text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 transition-all flex items-center gap-2"

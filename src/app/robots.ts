@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://agni.in/sitemap.xml",
+    sitemap: "https://agnigrow.in/sitemap.xml",
   };
 }

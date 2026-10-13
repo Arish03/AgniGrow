@@ -19,13 +19,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://agni.in"),
-  title: "Agni Digital Experience | Websites, Branding & Automation in Vaniyambadi",
+  metadataBase: new URL("https://agnigrow.in"),
+  title: "AgniGrow | Websites, Branding & Automation in Vaniyambadi",
   description:
-    "Agni Digital Experience is a premium digital agency based in Vaniyambadi, Tamil Nadu. We build modern, high-converting websites, brand identities, WhatsApp automation, and custom software systems.",
+    "AgniGrow is a premium digital agency based in Vaniyambadi, Tamil Nadu. We build modern, high-converting websites, brand identities, WhatsApp automation, and custom software systems.",
   keywords: [
-    "Agni",
-    "Agni Digital Experience",
+    "AgniGrow",
+    "Agni Grow",
     "Digital Agency Vaniyambadi",
     "Web Development Vaniyambadi",
     "Website Design Tamil Nadu",
@@ -36,37 +36,53 @@ export const metadata: Metadata = {
   ],
   authors: [
     { name: "Arish Srinivasan", url: "https://www.arishsrinivasan.in/" },
-    { name: "Agni Digital Experience", url: "https://agni.in" },
+    { name: "AgniGrow", url: "https://agnigrow.in" },
   ],
   creator: "Arish Srinivasan",
   openGraph: {
-    title: "Agni Digital Experience — Websites, Branding & Automation",
+    title: "AgniGrow — Websites, Branding & Automation",
     description:
       "Transform your business with cutting-edge digital experiences, high-converting websites, and automated growth systems.",
-    url: "https://agni.in",
-    siteName: "Agni Digital Experience",
+    url: "https://agnigrow.in",
+    siteName: "AgniGrow",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "AgniGrow — Websites, Branding & Automation in Vaniyambadi",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Agni Digital Experience",
+    title: "AgniGrow",
     description:
       "Websites, branding, and automation crafted to ignite business growth.",
+    images: ["/og-image.png"],
   },
   alternates: {
-    canonical: "https://agni.in",
+    canonical: "https://agnigrow.in",
+  },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: [{ url: "/apple-icon.svg" }],
   },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "Agni Digital Experience",
-  image: "https://agni.in/logo.png",
-  url: "https://agni.in",
-  telephone: "+91-9876543210",
-  email: "hello@agni.in",
+  name: "AgniGrow",
+  image: "https://agnigrow.in/og-image.png",
+  url: "https://agnigrow.in",
+  telephone: "+91-7200146914",
+  email: "info@agnigrow.in",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Vaniyambadi Main Road",
@@ -89,8 +105,8 @@ const jsonLd = {
     },
   ],
   sameAs: [
-    "https://instagram.com/agni.in",
-    "https://linkedin.com/company/agni-digital",
+    "https://instagram.com/agnigrow.in",
+    "https://linkedin.com/company/agnigrow",
   ],
   priceRange: "₹₹",
   serviceArea: {
@@ -128,11 +144,13 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <Navbar />
         {children}
         <Footer />
         <WhatsAppButton />
+        {/* Vercel Web Analytics */}
+        <Script src="/_vercel/insights/script.js" strategy="afterInteractive" />
       </body>
     </html>
   );

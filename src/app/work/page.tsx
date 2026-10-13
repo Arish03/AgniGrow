@@ -4,7 +4,7 @@ import Portfolio from "@/components/Portfolio";
 import Testimonials from "@/components/Testimonials";
 
 export const metadata: Metadata = {
-  title: "Selected Work & Case Studies | Agni Digital Experience",
+  title: "Selected Work & Case Studies | AgniGrow",
   description:
     "Explore our featured digital projects, high-converting websites, WhatsApp CRM setups, and custom business software shipped for clients in Tamil Nadu and worldwide.",
 };

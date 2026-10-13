@@ -384,8 +384,8 @@ export default function Portfolio() {
                 </div>
 
                 <a
-                  href={`https://wa.me/919876543210?text=${encodeURIComponent(
-                    `Hi Agni team, I was reviewing your case study on "${selectedProject.title}" and would like to build something similar for my business.`
+                  href={`https://wa.me/917200146914?text=${encodeURIComponent(
+                    `Hi AgniGrow team, I was reviewing your case study on "${selectedProject.title}" and would like to build something similar for my business.`
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"

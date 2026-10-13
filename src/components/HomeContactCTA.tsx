@@ -47,7 +47,7 @@ export default function HomeContactCTA() {
               Go to Contact Page &amp; Get a Quote →
             </Link>
             <a
-              href="https://wa.me/919876543210?text=Hi%20Agni%20team,%20I'd%20like%20to%20discuss%20a%20project%20for%20my%20business."
+              href="https://wa.me/917200146914?text=Hi%20AgniGrow%20team,%20I'd%20like%20to%20discuss%20a%20project%20for%20my%20business."
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-display font-bold text-xs sm:text-sm md:text-base border border-emerald-500/40 text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 transition-all text-center"
@@ -59,7 +59,7 @@ export default function HomeContactCTA() {
           {/* Quick Studio Details */}
           <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 pt-8 border-t border-cream-10 text-xs sm:text-sm text-cream-40">
             <span>📍 Vaniyambadi, Tamil Nadu</span>
-            <span>✉️ hello@agni.in</span>
+            <span>✉️ info@agnigrow.in</span>
             <span>⏱️ Mon–Sat: 9:30 AM – 7:00 PM</span>
           </div>
         </motion.div>

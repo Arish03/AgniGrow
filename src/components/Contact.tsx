@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { trackLeadSubmission, trackWhatsAppClick } from "@/lib/analytics";
 
 const SERVICE_OPTIONS = [
   "Website & Portal",
@@ -26,6 +27,8 @@ const TIMELINE_OPTIONS = [
   "1 – 2 Months",
   "Flexible",
 ];
+
+
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -58,7 +61,15 @@ export default function Contact() {
       return;
     }
 
-    const message = `*New Inquiry via Agni Website:*
+    // Track conversion event
+    trackLeadSubmission({
+      service: formData.service,
+      budget: formData.budget,
+      timeline: formData.timeline,
+    });
+    trackWhatsAppClick("contact_scoper_whatsapp");
+
+    const message = `*New Inquiry via AgniGrow Website:*
 • *Name:* ${formData.name}
 • *Contact:* ${formData.contact}
 • *Service:* ${formData.service}
@@ -66,7 +77,7 @@ export default function Contact() {
 • *Target Timeline:* ${formData.timeline}
 • *Project Notes:* ${formData.message.trim() || "Ready to discuss details"}`;
 
-    const url = `https://wa.me/919876543210?text=${encodeURIComponent(message)}`;
+    const url = `https://wa.me/917200146914?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
     setStatus("success");
   };
@@ -77,6 +88,13 @@ export default function Contact() {
       setErrorMessage("Please enter your name and phone/email to proceed.");
       return;
     }
+
+    // Track conversion event
+    trackLeadSubmission({
+      service: formData.service,
+      budget: formData.budget,
+      timeline: formData.timeline,
+    });
 
     setStatus("submitting");
     setTimeout(() => {
@@ -159,7 +177,7 @@ export default function Contact() {
               </a>
 
               <a
-                href="mailto:hello@agni.in"
+                href="mailto:info@agnigrow.in"
                 className="flex items-start gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl bg-white/[0.02] border border-cream-10 hover:border-cream-20 transition-colors group"
               >
                 <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-ember/10 border border-ember/20 flex items-center justify-center text-base sm:text-lg shrink-0">
@@ -170,13 +188,13 @@ export default function Contact() {
                     Direct Email
                   </h4>
                   <p className="text-xs sm:text-sm font-medium text-cream group-hover:text-ember transition-colors">
-                    hello@agni.in
+                    info@agnigrow.in
                   </p>
                 </div>
               </a>
 
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/917200146914"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-start gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl bg-white/[0.02] border border-cream-10 hover:border-emerald-500/30 transition-colors group"
@@ -189,7 +207,7 @@ export default function Contact() {
                     Fast WhatsApp Desk
                   </h4>
                   <p className="text-xs sm:text-sm font-medium text-cream group-hover:text-emerald-400 transition-colors">
-                    +91 98765 43210 (Mon–Sat, 9:30 AM – 7:00 PM)
+                    +91 72001 46914 (Mon–Sat, 9:30 AM – 7:00 PM)
                   </p>
                 </div>
               </a>
@@ -226,7 +244,7 @@ export default function Contact() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3 mt-4 w-full sm:w-auto justify-center">
                     <a
-                      href="https://wa.me/919876543210"
+                      href="https://wa.me/917200146914"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-5 py-2.5 rounded-full text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white transition-all flex items-center justify-center gap-1.5"
@@ -373,7 +391,7 @@ export default function Contact() {
                         value={formData.contact}
                         onChange={handleChange}
                         required
-                        placeholder="+91 98765 43210"
+                        placeholder="+91 72001 46914"
                         className="w-full px-3.5 py-2.5 sm:py-3 bg-white/[0.03] border border-cream-10 rounded-xl text-cream text-xs sm:text-sm placeholder:text-cream-20 outline-none transition-all focus:border-ember focus:shadow-[0_0_0_3px_rgba(255,90,31,0.15)]"
                       />
                     </div>

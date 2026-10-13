@@ -2,8 +2,8 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Agni Digital Experience",
-    short_name: "Agni",
+    name: "AgniGrow",
+    short_name: "AgniGrow",
     description: "Websites, Branding & Automation in Vaniyambadi, Tamil Nadu",
     start_url: "/",
     display: "standalone",

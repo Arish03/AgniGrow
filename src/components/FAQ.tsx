@@ -41,6 +41,19 @@ const FAQS: FAQItem[] = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+};
+
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
@@ -50,6 +63,11 @@ export default function FAQ() {
 
   return (
     <section className="py-16 sm:py-24 relative overflow-hidden" id="faq">
+      {/* Google Search FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Background ambient lighting */}
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[700px] h-[350px] sm:h-[700px] rounded-full pointer-events-none"
@@ -145,7 +163,7 @@ export default function FAQ() {
             </p>
           </div>
           <a
-            href="https://wa.me/919876543210?text=Hi%20Agni%20team,%20I%20have%20a%20question%20regarding%20your%20services"
+            href="https://wa.me/917200146914?text=Hi%20AgniGrow%20team,%20I%20have%20a%20question%20regarding%20your%20services"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto shrink-0 px-5 py-2.5 rounded-full text-xs font-display font-semibold gradient-ember text-bg shadow-ember hover:shadow-ember-hover transition-all text-center"

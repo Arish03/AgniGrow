@@ -3,9 +3,9 @@ import Contact from "@/components/Contact";
 import FAQ from "@/components/FAQ";
 
 export const metadata: Metadata = {
-  title: "Contact & Project Inquiries | Agni Digital Experience",
+  title: "Contact & Project Inquiries | AgniGrow",
   description:
-    "Get in touch with Agni Digital Experience in Vaniyambadi, Tamil Nadu. Book a discovery call, chat with our technical lead on WhatsApp, or request an official quote.",
+    "Get in touch with AgniGrow in Vaniyambadi, Tamil Nadu. Book a discovery call, chat with our technical lead on WhatsApp, or request an official quote.",
 };
 
 export default function ContactPage() {

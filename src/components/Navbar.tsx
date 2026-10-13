@@ -83,7 +83,7 @@ export default function Navbar() {
 
           {/* Direct WhatsApp Action Button (No Get a Quote) */}
           <a
-            href="https://wa.me/919876543210?text=Hi%20Agni%20team,%20I'd%20like%20to%20discuss%20a%20project"
+            href="https://wa.me/917200146914?text=Hi%20AgniGrow%20team,%20I'd%20like%20to%20discuss%20a%20project"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Direct WhatsApp Chat"
@@ -166,7 +166,7 @@ export default function Navbar() {
 
               <div className="pt-6 border-t border-cream-10">
                 <a
-                  href="https://wa.me/919876543210?text=Hi%20Agni%20team,%20I'd%20like%20to%20discuss%20a%20project"
+                  href="https://wa.me/917200146914?text=Hi%20AgniGrow%20team,%20I'd%20like%20to%20discuss%20a%20project"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-display font-bold text-sm shadow-md shadow-emerald-950/25"

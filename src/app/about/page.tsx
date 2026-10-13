@@ -4,9 +4,9 @@ import AgniLogo from "@/components/AgniLogo";
 import AnimatedStat from "@/components/AnimatedStat";
 
 export const metadata: Metadata = {
-  title: "About Us | Agni Digital Experience — Vaniyambadi, Tamil Nadu",
+  title: "About Us | AgniGrow — Vaniyambadi, Tamil Nadu",
   description:
-    "Learn about Agni Digital Experience, our founding mission, engineering values, and how we empower local and global businesses with world-class digital systems.",
+    "Learn about AgniGrow, our founding mission, engineering values, and how we empower local and global businesses with world-class digital systems.",
 };
 
 const VALUES = [
@@ -67,7 +67,7 @@ export default function AboutPage() {
           <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-ember/10 border border-ember/20 mb-5 sm:mb-6">
             <span className="w-2 h-2 rounded-full bg-ember animate-pulse" />
             <span className="font-display text-[0.7rem] sm:text-xs font-semibold tracking-[0.16em] uppercase text-ember">
-              The Story Behind Agni
+              The Story Behind AgniGrow
             </span>
           </div>
 
@@ -78,12 +78,12 @@ export default function AboutPage() {
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg text-cream-60 max-w-[680px] mx-auto leading-relaxed mb-8 sm:mb-10 px-2">
-            Agni Digital Experience is a forward-thinking digital agency founded to give local businesses, manufacturers, and export brands world-class digital firepower.
+            AgniGrow is a forward-thinking digital agency founded to give local businesses, manufacturers, and export brands world-class digital firepower.
           </p>
 
           <div className="flex justify-center">
             <div className="p-3 sm:p-3.5 rounded-2xl bg-bg-card border border-cream-10 inline-flex items-center gap-3">
-              <AgniLogo size={32} showText={false} />
+              <AgniLogo width={32} />
               <div className="text-left">
                 <span className="font-display font-bold text-xs sm:text-sm text-cream block">
                   Agni (अग्नि)
@@ -242,7 +242,7 @@ export default function AboutPage() {
                 Start a Conversation →
               </Link>
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/917200146914"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-7 py-3.5 rounded-full font-display font-bold text-xs sm:text-sm border border-emerald-500/40 text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 transition-all flex items-center justify-center gap-2 text-center"
