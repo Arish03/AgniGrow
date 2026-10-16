@@ -49,7 +49,7 @@ export default function Navbar() {
     >
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 flex items-center justify-between">
         {/* Brand Logo on Left */}
-        <Link href="/" className="relative z-20 outline-none shrink-0" aria-label="Agni home">
+        <Link href="/" className="relative z-20 outline-none shrink-0" aria-label="AgniGrow home">
           <AgniLogo size={28} showText={true} />
         </Link>
 

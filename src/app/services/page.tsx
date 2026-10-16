@@ -4,12 +4,103 @@ import Addons from "@/components/Addons";
 import Process from "@/components/Process";
 
 export const metadata: Metadata = {
-  title: "Services & Capabilities",
+  title: "Services & Capabilities | Web, Branding & WhatsApp CRM",
   description:
-    "Explore our complete range of digital services: high-converting web development, brand identity, WhatsApp CRM automation, e-commerce stores, and custom software systems in Vaniyambadi.",
+    "Explore full-stack digital capabilities: high-converting Next.js websites, official WhatsApp Business CRM bots, luxury brand visual identities, and custom cloud POS software in Vaniyambadi & Tamil Nadu.",
   alternates: {
-    canonical: "/services",
+    canonical: "https://agnigrow.in/services",
   },
+  openGraph: {
+    title: "Services & Capabilities | AgniGrow Digital Solutions",
+    description:
+      "Explore full-stack digital capabilities: high-converting Next.js websites, official WhatsApp Business CRM bots, luxury brand visual identities, and custom cloud software.",
+    url: "https://agnigrow.in/services",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Services & Capabilities | AgniGrow Digital Solutions",
+    description:
+      "Next.js websites, WhatsApp CRM automation, brand identities, and cloud POS billing systems tailored to accelerate business growth.",
+  },
+};
+
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://agnigrow.in/services#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://agnigrow.in",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Services & Capabilities",
+          item: "https://agnigrow.in/services",
+        },
+      ],
+    },
+    {
+      "@type": "Service",
+      "@id": "https://agnigrow.in/services#service",
+      name: "AgniGrow Digital Solutions & Capabilities",
+      provider: {
+        "@id": "https://agnigrow.in/#organization",
+      },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Full-Stack Capabilities",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Website Development",
+              description: "High-speed, multilingual, mobile-first websites engineered to turn visitors into paying clients.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "WhatsApp Automation & CRM",
+              description: "Automated customer flows, lead management, and instant notifications via official WhatsApp Business API.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Branding & Visual Identity",
+              description: "Vector logo suites, luxury packaging, color palettes, and comprehensive brand guidelines.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "E-Commerce & Digital Catalogs",
+              description: "Modern storefronts with payment gateways, automated inventory alerts, and instant WhatsApp receipts.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Custom Software & Cloud POS",
+              description: "Tailored business management software, thermal billing, and multi-depot inventory tracking.",
+            },
+          },
+        ],
+      },
+    },
+  ],
 };
 
 const DETAILED_SERVICES = [
@@ -130,6 +221,10 @@ const DETAILED_SERVICES = [
 export default function ServicesPage() {
   return (
     <div className="pt-28 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
+      />
       {/* Hero Header */}
       <section className="relative overflow-hidden py-16 text-center">
         <div
@@ -201,7 +296,7 @@ export default function ServicesPage() {
                       {s.description}
                     </p>
 
-                    <div className="p-3.5 sm:p-4 rounded-xl bg-white/[0.02] border border-cream-05 inline-block">
+                    <div className="p-3.5 sm:p-4 rounded-xl bg-cream-05 border border-cream-05 inline-block">
                       <span className="text-[0.7rem] sm:text-xs uppercase tracking-wider text-cream-40 font-semibold block mb-1">
                         Best Suited For:
                       </span>
@@ -212,7 +307,7 @@ export default function ServicesPage() {
                   </div>
 
                   {/* Right Column: Deliverables */}
-                  <div className="lg:col-span-5 bg-white/[0.02] border border-cream-10 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8">
+                  <div className="lg:col-span-5 bg-cream-05 border border-cream-10 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8">
                     <h3 className="font-display text-xs sm:text-sm font-bold uppercase tracking-wider text-cream mb-3 sm:mb-4 flex items-center gap-2">
                       <span className="text-ember">⚡</span> Key Deliverables
                     </h3>

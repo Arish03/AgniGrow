@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🔥 AGNI Digital Experience
+# 🔥 AgniGrow
 ### High-Performance Websites, Brand Systems & WhatsApp Automation
 
 [![Next.js](https://img.shields.io/badge/Next.js-16.3-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
@@ -11,9 +11,9 @@
 
 <br />
 
-**Agni Digital Experience** is a premium digital agency engineering high-converting web portals, automated WhatsApp CRM systems, bespoke brand identities, and cloud software for ambitious regional manufacturers, exporters, and local businesses in Tamil Nadu and worldwide.
+**AgniGrow** is a premium digital agency engineering high-converting web portals, automated WhatsApp CRM systems, bespoke brand identities, and cloud software for ambitious regional manufacturers, exporters, and local businesses in Tamil Nadu and worldwide.
 
-[🌐 Live Website](https://agni.in) • [👨‍💻 Developer Portfolio](https://www.arishsrinivasan.in/) • [🐙 GitHub](https://github.com/Arish03) • [💬 WhatsApp Desk](https://wa.me/919876543210) • [✉️ Contact Team](mailto:hello@agni.in)
+[🌐 Live Website](https://agnigrow.in) • [👨‍💻 Developer Portfolio](https://www.arishsrinivasan.in/) • [🐙 GitHub](https://github.com/Arish03) • [💬 WhatsApp Desk](https://wa.me/917200146914) • [✉️ Contact Team](mailto:info@agnigrow.in)
 
 </div>
 
@@ -163,9 +163,9 @@ npx vercel
 - **🌐 Portfolio**: [https://www.arishsrinivasan.in/](https://www.arishsrinivasan.in/)
 - **🐙 GitHub**: [@Arish03](https://github.com/Arish03)
 - **✉️ Direct Email**: [arishsrinivasan@outlook.com](mailto:arishsrinivasan@outlook.com)
-- **🏢 Agency**: Agni Digital Experience
+- **🏢 Agency**: AgniGrow
 - **📍 Location**: Vaniyambadi, Tamil Nadu, India
-- **📦 Repository**: `agni-site`
+- **📦 Repository**: `agnigrow-site`
 - **⚡ Architecture**: Next.js 16 (App Router) + React 19 + Tailwind CSS v4 + TypeScript
 
 ### ⚙️ Available Scripts
@@ -182,14 +182,14 @@ npx vercel
 ## 🔧 Developer Customization Recipes
 
 ### 1. Updating the WhatsApp Contact Number
-The direct WhatsApp routing is configured across 4 key touchpoints. Search and replace `919876543210` with your verified business phone number (include country code without `+`):
+The direct WhatsApp routing is configured across 4 key touchpoints. Search and replace `917200146914` with your verified business phone number (include country code without `+`):
 - `src/components/Navbar.tsx` (Desktop & Mobile action buttons)
 - `src/components/WhatsAppButton.tsx` (Floating speed dial)
 - `src/components/Contact.tsx` (Project scope builder submit)
 - `src/components/HomeContactCTA.tsx` (Homepage bottom CTA)
 
 ### 2. Adding a New Case Study
-Open [`src/components/Portfolio.tsx`](file:///d:/AGD/agnix-site/src/components/Portfolio.tsx) and add a new object to the `PROJECTS` array:
+Open [`src/components/Portfolio.tsx`](file:///d:/Agni%20Grow/agnigrow-site/src/components/Portfolio.tsx) and add a new object to the `PROJECTS` array:
 ```typescript
 {
   id: "my-project-slug",
@@ -202,7 +202,7 @@ Open [`src/components/Portfolio.tsx`](file:///d:/AGD/agnix-site/src/components/P
   metricLabel: "Key Commercial Result",
   tags: ["Next.js", "Tailwind", "WhatsApp CRM"],
   gradient: "from-[#ff5a1f]/20 to-[#ffb020]/10",
-  challenge: "The bottleneck the client faced prior to hiring Agni.",
+  challenge: "The bottleneck the client faced prior to hiring AgniGrow.",
   solution: "The exact engineering & design solution implemented.",
   deliverables: ["Deliverable 1", "Deliverable 2", "Deliverable 3"],
   timeline: "2 Weeks",
@@ -210,7 +210,7 @@ Open [`src/components/Portfolio.tsx`](file:///d:/AGD/agnix-site/src/components/P
 ```
 
 ### 3. Adding Client Testimonials
-Open [`src/components/Testimonials.tsx`](file:///d:/AGD/agnix-site/src/components/Testimonials.tsx) and append to `TESTIMONIALS`:
+Open [`src/components/Testimonials.tsx`](file:///d:/Agni%20Grow/agnigrow-site/src/components/Testimonials.tsx) and append to `TESTIMONIALS`:
 ```typescript
 {
   quote: "Client review text detailing tangible results.",
@@ -225,19 +225,19 @@ Open [`src/components/Testimonials.tsx`](file:///d:/AGD/agnix-site/src/component
 ```
 
 ### 4. Customizing Theme Colors
-All colors are centralized in [`src/app/globals.css`](file:///d:/AGD/agnix-site/src/app/globals.css) under `:root` and `.light`. Modify the CSS custom properties (`--ember`, `--gold`, `--bg`, `--cream`) to instantly reflect across all components and utility classes.
+All colors are centralized in [`src/app/globals.css`](file:///d:/Agni%20Grow/agnigrow-site/src/app/globals.css) under `:root` and `.light`. Modify the CSS custom properties (`--ember`, `--gold`, `--bg`, `--cream`) to instantly reflect across all components and utility classes.
 
 ---
 
 ## 📞 Studio Contact
 
 - **Studio**: Vaniyambadi, Tamil Nadu, 635751, India
-- **WhatsApp**: [+91 98765 43210](https://wa.me/919876543210)
-- **Email**: [hello@agni.in](mailto:hello@agni.in)
-- **Website**: [https://agni.in](https://agni.in)
+- **WhatsApp**: [+91 72001 46914](https://wa.me/917200146914)
+- **Email**: [info@agnigrow.in](mailto:info@agnigrow.in)
+- **Website**: [https://agnigrow.in](https://agnigrow.in)
 
 ---
 
 <div align="center">
-  <small>© 2026 Agni Digital Experience. Engineered with 🔥 by <a href="https://www.arishsrinivasan.in/" target="_blank"><strong>Arish Srinivasan</strong></a>. All rights reserved.</small>
+  <small>© 2026 AgniGrow. Engineered with 🔥 by <a href="https://www.arishsrinivasan.in/" target="_blank"><strong>Arish Srinivasan</strong></a>. All rights reserved.</small>
 </div>

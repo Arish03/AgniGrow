@@ -4,17 +4,73 @@ import Portfolio from "@/components/Portfolio";
 import Testimonials from "@/components/Testimonials";
 
 export const metadata: Metadata = {
-  title: "Case Studies & Selected Work",
+  title: "Case Studies & Selected Work | Proven Digital Solutions",
   description:
-    "Explore our featured digital projects, high-converting websites, WhatsApp CRM setups, and custom business software shipped for clients in Tamil Nadu and worldwide.",
+    "Explore verified case studies: international leather export portals, clinic WhatsApp CRM bots, QR cafe billing suites, and brand identities shipped by AgniGrow in Tamil Nadu.",
   alternates: {
-    canonical: "/work",
+    canonical: "https://agnigrow.in/work",
   },
+  openGraph: {
+    title: "Case Studies & Selected Work | AgniGrow Portfolio",
+    description:
+      "Explore verified case studies: international leather export portals, clinic WhatsApp CRM bots, QR cafe billing suites, and brand identities shipped by AgniGrow.",
+    url: "https://agnigrow.in/work",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Case Studies & Selected Work | AgniGrow Portfolio",
+    description:
+      "High-converting websites, WhatsApp CRM automations, and custom software delivered for real businesses.",
+  },
+};
+
+const workSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://agnigrow.in/work#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://agnigrow.in",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Portfolio & Case Studies",
+          item: "https://agnigrow.in/work",
+        },
+      ],
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://agnigrow.in/work#webpage",
+      url: "https://agnigrow.in/work",
+      name: "AgniGrow Selected Case Studies",
+      description:
+        "Featured client case studies across export web portals, WhatsApp CRM automations, brand identities, and custom business software.",
+      isPartOf: {
+        "@id": "https://agnigrow.in/#website",
+      },
+      about: {
+        "@id": "https://agnigrow.in/#organization",
+      },
+      inLanguage: "en-IN",
+    },
+  ],
 };
 
 export default function WorkPage() {
   return (
     <div className="pt-28 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(workSchema) }}
+      />
       {/* Work Page Header */}
       <section className="relative overflow-hidden py-16 text-center">
         <div

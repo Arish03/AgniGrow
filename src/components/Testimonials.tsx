@@ -25,7 +25,7 @@ const CATEGORIES = [
 const TESTIMONIALS: Testimonial[] = [
   {
     quote:
-      "Agni built our international export portal in under 3 weeks. International leather buyers in Germany and the UK can now browse our full catalog and request custom sample specs seamlessly. Our inquiry volume doubled within 60 days.",
+      "AgniGrow built our international export portal in under 3 weeks. International leather buyers in Germany and the UK can now browse our full catalog and request custom sample specs seamlessly. Our inquiry volume doubled within 60 days.",
     author: "Zubair Ahmed",
     role: "Managing Director",
     company: "EuroStyle Leather Exports",
@@ -47,7 +47,7 @@ const TESTIMONIALS: Testimonial[] = [
   },
   {
     quote:
-      "Our restaurant table turnaround is so much faster now with the smart QR menu and billing integration. Agni understands both the modern web look and the practical needs of running a local food business.",
+      "Our restaurant table turnaround is so much faster now with the smart QR menu and billing integration. AgniGrow understands both the modern web look and the practical needs of running a local food business.",
     author: "Mohammad Irfan",
     role: "Co-Founder",
     company: "The Artisan Roast Cafe",
@@ -69,7 +69,7 @@ const TESTIMONIALS: Testimonial[] = [
   },
   {
     quote:
-      "Our optical retail boutique needed an upscale luxury presence. Agni created a visual identity and appointment scheduler that elevates our showroom above metro competitors. Sales conversion increased by 40%.",
+      "Our optical retail boutique needed an upscale luxury presence. AgniGrow created a visual identity and appointment scheduler that elevates our showroom above metro competitors. Sales conversion increased by 40%.",
     author: "A. Rahman",
     role: "Lead Optometrist",
     company: "Elite Vision Studio",
@@ -136,7 +136,7 @@ export default function Testimonials() {
                   className={`px-3.5 py-1.5 rounded-full text-xs font-display font-medium transition-all duration-200 cursor-pointer ${
                     isActive
                       ? "bg-ember text-bg font-bold shadow-md shadow-ember/25"
-                      : "bg-white/[0.03] text-cream-60 hover:text-cream border border-cream-10 hover:border-cream-20"
+                      : "bg-cream-05 text-cream-60 hover:text-cream border border-cream-10 hover:border-cream-20"
                   }`}
                 >
                   {cat.label}
@@ -188,7 +188,7 @@ export default function Testimonials() {
                       {t.role}, <span className="text-ember font-medium">{t.company}</span>
                     </p>
                   </div>
-                  <span className="text-[0.68rem] sm:text-xs px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-white/[0.04] text-cream-40 font-mono">
+                  <span className="text-[0.68rem] sm:text-xs px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-cream-05 text-cream-40 font-mono">
                     📍 {t.location}
                   </span>
                 </div>

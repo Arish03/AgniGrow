@@ -55,7 +55,7 @@ export default function AnimatedStat({
   return (
     <div
       ref={ref}
-      className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white/[0.02] border border-cream-10 hover:border-ember/30 hover:bg-white/[0.04] transition-all duration-300 flex flex-col justify-between group"
+      className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-cream-05 border border-cream-10 hover:border-ember/30 hover:bg-cream-10 transition-all duration-300 flex flex-col justify-between group"
     >
       <span className="font-display text-2xl sm:text-4xl font-extrabold text-gradient mb-1 sm:mb-2 group-hover:scale-105 transition-transform duration-300 origin-left inline-block">
         {prefix}

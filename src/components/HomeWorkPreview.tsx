@@ -96,7 +96,7 @@ export default function HomeWorkPreview() {
 
               <div>
                 {/* Metric pill */}
-                <div className="p-2.5 sm:p-3 rounded-xl bg-white/[0.03] border border-cream-10 mb-3.5 flex items-center justify-between">
+                <div className="p-2.5 sm:p-3 rounded-xl bg-cream-05 border border-cream-10 mb-3.5 flex items-center justify-between">
                   <span className="text-xs text-cream-40">{p.metricLabel}</span>
                   <span className="font-display text-lg sm:text-xl font-black text-gradient">
                     {p.metric}
@@ -107,7 +107,7 @@ export default function HomeWorkPreview() {
                   {p.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-[0.68rem] sm:text-[0.7rem] px-2 py-0.5 rounded-md bg-white/[0.04] text-cream-40 border border-cream-05"
+                      className="text-[0.68rem] sm:text-[0.7rem] px-2 py-0.5 rounded-md bg-cream-05 text-cream-40 border border-cream-05"
                     >
                       {tag}
                     </span>

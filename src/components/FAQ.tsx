@@ -153,7 +153,7 @@ export default function FAQ() {
         </div>
 
         {/* Support Callout */}
-        <div className="mt-8 sm:mt-12 p-5 sm:p-6 rounded-2xl bg-white/[0.02] border border-cream-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <div className="mt-8 sm:mt-12 p-5 sm:p-6 rounded-2xl bg-cream-05 border border-cream-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <div className="w-full sm:w-auto">
             <h3 className="font-display font-bold text-cream text-sm sm:text-base mb-1">
               Have a specific question not listed here?

@@ -7,7 +7,7 @@ import AgniLogo from "./AgniLogo";
 const footerLinks = {
   navigate: [
     { label: "Home", href: "/" },
-    { label: "About Agni", href: "/about" },
+    { label: "About AgniGrow", href: "/about" },
     { label: "Services & Capabilities", href: "/services" },
     { label: "Selected Work & Portfolio", href: "/work" },
     { label: "How We Work (Process)", href: "/#process" },
@@ -39,7 +39,7 @@ export default function Footer() {
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1.2fr] gap-8 sm:gap-10 pb-12 sm:pb-16">
         {/* Brand */}
         <div className="flex flex-col gap-4">
-          <Link href="/" aria-label="Agni home">
+          <Link href="/" aria-label="AgniGrow home">
             <AgniLogo width={160} />
           </Link>
           <p className="text-sm text-cream-60 max-w-[280px] leading-relaxed">
@@ -102,7 +102,7 @@ export default function Footer() {
           </h4>
           <div className="flex flex-col gap-3 text-sm text-cream-40">
             <p className="leading-relaxed">
-              📍 Vaniyambadi, Tamil Nadu, 635751, India
+              Vaniyambadi, Tamil Nadu, 635751, India
             </p>
             <p className="text-xs text-cream-40">
               Serving businesses across Tirupattur, Ambur, Vellore, Chennai &amp; international exporters.

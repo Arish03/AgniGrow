@@ -161,7 +161,7 @@ export default function Contact() {
                 href="https://maps.google.com/?q=Vaniyambadi+Tamil+Nadu"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl bg-white/[0.02] border border-cream-10 hover:border-cream-20 transition-colors group"
+                className="flex items-start gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl bg-cream-05 border border-cream-10 hover:border-cream-20 transition-colors group"
               >
                 <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-ember/10 border border-ember/20 flex items-center justify-center text-base sm:text-lg shrink-0">
                   📍
@@ -178,7 +178,7 @@ export default function Contact() {
 
               <a
                 href="mailto:info@agnigrow.in"
-                className="flex items-start gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl bg-white/[0.02] border border-cream-10 hover:border-cream-20 transition-colors group"
+                className="flex items-start gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl bg-cream-05 border border-cream-10 hover:border-cream-20 transition-colors group"
               >
                 <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-ember/10 border border-ember/20 flex items-center justify-center text-base sm:text-lg shrink-0">
                   ✉️
@@ -197,7 +197,7 @@ export default function Contact() {
                 href="https://wa.me/917200146914"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-start gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl bg-white/[0.02] border border-cream-10 hover:border-emerald-500/30 transition-colors group"
+                className="flex items-start gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl bg-cream-05 border border-cream-10 hover:border-emerald-500/30 transition-colors group"
               >
                 <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-base sm:text-lg shrink-0">
                   💬
@@ -303,7 +303,7 @@ export default function Contact() {
                             className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer ${
                               isSelected
                                 ? "bg-ember text-bg font-bold shadow-sm shadow-ember/30"
-                                : "bg-white/[0.03] text-cream-60 hover:text-cream border border-cream-10"
+                                : "bg-cream-05 text-cream-60 hover:text-cream border border-cream-10"
                             }`}
                           >
                             {svc}
@@ -329,7 +329,7 @@ export default function Contact() {
                             className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer ${
                               isSelected
                                 ? "bg-gold text-bg font-bold shadow-sm shadow-gold/30"
-                                : "bg-white/[0.03] text-cream-60 hover:text-cream border border-cream-10"
+                                : "bg-cream-05 text-cream-60 hover:text-cream border border-cream-10"
                             }`}
                           >
                             {b}
@@ -354,8 +354,8 @@ export default function Contact() {
                             onClick={() => handleSelectOption("timeline", time)}
                             className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer ${
                               isSelected
-                                ? "bg-white text-bg font-bold"
-                                : "bg-white/[0.03] text-cream-60 hover:text-cream border border-cream-10"
+                                ? "bg-cream text-bg font-bold shadow-sm"
+                                : "bg-cream-05 text-cream-60 hover:text-cream border border-cream-10"
                             }`}
                           >
                             {time}
@@ -378,7 +378,7 @@ export default function Contact() {
                         onChange={handleChange}
                         required
                         placeholder="e.g. Aslam Khan"
-                        className="w-full px-3.5 py-2.5 sm:py-3 bg-white/[0.03] border border-cream-10 rounded-xl text-cream text-xs sm:text-sm placeholder:text-cream-20 outline-none transition-all focus:border-ember focus:shadow-[0_0_0_3px_rgba(255,90,31,0.15)]"
+                        className="w-full px-3.5 py-2.5 sm:py-3 bg-cream-05 border border-cream-10 rounded-xl text-cream text-xs sm:text-sm placeholder:text-cream-20 outline-none transition-all focus:border-ember focus:shadow-[0_0_0_3px_rgba(255,90,31,0.15)]"
                       />
                     </div>
                     <div className="flex flex-col gap-1.5">
@@ -392,7 +392,7 @@ export default function Contact() {
                         onChange={handleChange}
                         required
                         placeholder="+91 72001 46914"
-                        className="w-full px-3.5 py-2.5 sm:py-3 bg-white/[0.03] border border-cream-10 rounded-xl text-cream text-xs sm:text-sm placeholder:text-cream-20 outline-none transition-all focus:border-ember focus:shadow-[0_0_0_3px_rgba(255,90,31,0.15)]"
+                        className="w-full px-3.5 py-2.5 sm:py-3 bg-cream-05 border border-cream-10 rounded-xl text-cream text-xs sm:text-sm placeholder:text-cream-20 outline-none transition-all focus:border-ember focus:shadow-[0_0_0_3px_rgba(255,90,31,0.15)]"
                       />
                     </div>
                   </div>
@@ -408,7 +408,7 @@ export default function Contact() {
                       value={formData.message}
                       onChange={handleChange}
                       placeholder="Share a brief about your business, reference websites you like, or specific requirements..."
-                      className="w-full px-3.5 py-2.5 sm:py-3 bg-white/[0.03] border border-cream-10 rounded-xl text-cream text-xs sm:text-sm placeholder:text-cream-20 outline-none transition-all focus:border-ember focus:shadow-[0_0_0_3px_rgba(255,90,31,0.15)] resize-none"
+                      className="w-full px-3.5 py-2.5 sm:py-3 bg-cream-05 border border-cream-10 rounded-xl text-cream text-xs sm:text-sm placeholder:text-cream-20 outline-none transition-all focus:border-ember focus:shadow-[0_0_0_3px_rgba(255,90,31,0.15)] resize-none"
                     />
                   </div>
 

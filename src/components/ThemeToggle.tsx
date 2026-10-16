@@ -29,7 +29,7 @@ export default function ThemeToggle() {
   // Avoid hydration mismatch while rendering placeholder
   if (!mounted) {
     return (
-      <div className="w-9 h-9 rounded-full border border-cream-20 bg-white/[0.04]" />
+      <div className="w-9 h-9 rounded-full border border-cream-20 bg-cream-05" />
     );
   }
 
@@ -38,7 +38,7 @@ export default function ThemeToggle() {
       type="button"
       onClick={toggleTheme}
       aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
-      className="relative w-9 h-9 rounded-full flex items-center justify-center border border-cream-20 bg-white/[0.03] text-cream hover:border-ember hover:text-ember transition-colors duration-200 outline-none cursor-pointer group"
+      className="relative w-9 h-9 rounded-full flex items-center justify-center border border-cream-20 bg-cream-05 text-cream hover:border-ember hover:text-ember transition-colors duration-200 outline-none cursor-pointer group"
       title={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
     >
       <motion.div

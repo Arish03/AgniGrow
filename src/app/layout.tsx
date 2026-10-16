@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Outfit, Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
@@ -18,6 +18,15 @@ const inter = Inter({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#0b0807" },
+    { media: "(prefers-color-scheme: light)", color: "#faf7f2" },
+  ],
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://agnigrow.in"),
   title: {
@@ -25,24 +34,35 @@ export const metadata: Metadata = {
     template: "%s | AgniGrow",
   },
   description:
-    "AgniGrow is a premium digital agency based in Vaniyambadi, Tamil Nadu. We build modern, high-converting websites, brand identities, WhatsApp automation, and custom software systems.",
+    "AgniGrow is a premium digital agency in Vaniyambadi, Tamil Nadu. We engineer high-converting Next.js websites, brand identities, WhatsApp CRM automation, and custom software systems for regional and export businesses.",
+  applicationName: "AgniGrow",
+  category: "technology",
+  classification: "Digital Agency, Web Development, Automation",
   keywords: [
     "AgniGrow",
     "Agni Grow",
+    "Agni Digital",
     "Digital Agency Vaniyambadi",
     "Web Development Vaniyambadi",
     "Website Design Tamil Nadu",
     "Branding Agency Vaniyambadi",
     "WhatsApp Automation India",
+    "WhatsApp Business API Tamil Nadu",
+    "Leather Export Website Vaniyambadi",
     "E-commerce Development Tirupattur",
     "Custom Software Solutions",
   ],
   authors: [
     { name: "Arish Srinivasan", url: "https://www.arishsrinivasan.in/" },
-    { name: "AgniGrow", url: "https://agnigrow.in" },
+    { name: "AgniGrow Team", url: "https://agnigrow.in" },
   ],
   creator: "Arish Srinivasan",
   publisher: "AgniGrow",
+  formatDetection: {
+    email: true,
+    address: true,
+    telephone: true,
+  },
   robots: {
     index: true,
     follow: true,
@@ -55,28 +75,29 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "AgniGrow — Websites, Branding & Automation",
+    title: "AgniGrow — Websites, Branding & WhatsApp Automation",
     description:
-      "Transform your business with cutting-edge digital experiences, high-converting websites, and automated growth systems.",
+      "Transform your business with cutting-edge digital experiences, high-converting Next.js websites, and automated WhatsApp growth systems.",
     url: "https://agnigrow.in",
     siteName: "AgniGrow",
     locale: "en_IN",
     type: "website",
     images: [
       {
-        url: "/og-image.svg",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "AgniGrow — Websites, Branding & Automation in Vaniyambadi",
+        type: "image/png",
+        alt: "AgniGrow — Websites, Branding & Automation in Vaniyambadi, Tamil Nadu",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AgniGrow — Websites, Branding & Automation",
+    title: "AgniGrow — Websites, Branding & WhatsApp Automation",
     description:
-      "Websites, branding, and automation crafted to ignite business growth.",
-    images: ["/og-image.svg"],
+      "High-speed websites, branding, and WhatsApp CRM systems crafted to ignite business growth.",
+    images: ["/opengraph-image"],
   },
   alternates: {
     canonical: "https://agnigrow.in",
@@ -93,8 +114,11 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
+  "@id": "https://agnigrow.in/#organization",
   name: "AgniGrow",
-  image: "https://agnigrow.in/og-image.png",
+  alternateName: ["Agni Grow", "Agni Digital"],
+  image: "https://agnigrow.in/opengraph-image",
+  logo: "https://agnigrow.in/icon.svg",
   url: "https://agnigrow.in",
   telephone: "+91-7200146914",
   email: "info@agnigrow.in",
@@ -111,6 +135,62 @@ const jsonLd = {
     latitude: 12.6825,
     longitude: 78.6186,
   },
+  areaServed: [
+    { "@type": "City", name: "Vaniyambadi" },
+    { "@type": "City", name: "Ambur" },
+    { "@type": "City", name: "Tirupattur" },
+    { "@type": "City", name: "Vellore" },
+    { "@type": "City", name: "Ranipet" },
+    { "@type": "City", name: "Chennai" },
+    { "@type": "State", name: "Tamil Nadu" },
+    { "@type": "Country", name: "India" },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "AgniGrow Digital Solutions",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "High-Speed Next.js Website Development",
+          description: "Mobile-first, multilingual, export-ready web portals with sub-second loading speed.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "WhatsApp CRM & Business Automation",
+          description: "Official WhatsApp Cloud API chatbots, lead funnels, and automated appointment workflows.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Brand Identity & Design Systems",
+          description: "Modern vector logos, luxury product packaging, typography kits, and corporate guidelines.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Custom Cloud POS & ERP Software",
+          description: "Thermal billing systems, warehouse inventory control, and multi-depot sales dashboards.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "E-Commerce Stores & B2B Catalogs",
+          description: "Frictionless storefronts with UPI/Razorpay payments and direct WhatsApp order notifications.",
+        },
+      },
+    ],
+  },
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -124,9 +204,11 @@ const jsonLd = {
     "https://linkedin.com/company/agnigrow",
   ],
   priceRange: "₹₹",
+  currenciesAccepted: "INR, USD, EUR",
+  paymentAccepted: "Cash, Credit Card, Bank Transfer, UPI",
   serviceArea: {
     "@type": "AdministrativeArea",
-    name: "Tamil Nadu, India & Global",
+    name: "Tamil Nadu, India & International Exporters",
   },
 };
 

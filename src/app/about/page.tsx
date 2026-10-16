@@ -4,12 +4,64 @@ import AgniLogo from "@/components/AgniLogo";
 import AnimatedStat from "@/components/AnimatedStat";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Us — Our Story & Engineering Values",
   description:
-    "Learn about AgniGrow, our founding mission, engineering values, and how we empower local and global businesses with world-class digital systems.",
+    "Founded in Vaniyambadi to bridge local hustle with global digital excellence. Learn how AgniGrow builds high-performance web systems, brand identities, and automation.",
   alternates: {
-    canonical: "/about",
+    canonical: "https://agnigrow.in/about",
   },
+  openGraph: {
+    title: "About AgniGrow — Our Mission & Engineering Values",
+    description:
+      "Born in Vaniyambadi. Building for the world. Discover how AgniGrow helps ambitious regional and export businesses achieve digital dominance.",
+    url: "https://agnigrow.in/about",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About AgniGrow — Our Mission & Engineering Values",
+    description:
+      "Born in Vaniyambadi. Building for the world. Learn about our founding mission and craft.",
+  },
+};
+
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://agnigrow.in/about#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://agnigrow.in",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "About Us",
+          item: "https://agnigrow.in/about",
+        },
+      ],
+    },
+    {
+      "@type": "AboutPage",
+      "@id": "https://agnigrow.in/about#webpage",
+      url: "https://agnigrow.in/about",
+      name: "About AgniGrow",
+      description:
+        "Learn about AgniGrow, our founding mission, engineering values, and how we empower local and global businesses with world-class digital systems.",
+      isPartOf: {
+        "@id": "https://agnigrow.in/#website",
+      },
+      about: {
+        "@id": "https://agnigrow.in/#organization",
+      },
+      inLanguage: "en-IN",
+    },
+  ],
 };
 
 const VALUES = [
@@ -57,6 +109,10 @@ const DIFFERENCES = [
 export default function AboutPage() {
   return (
     <div className="pt-24 sm:pt-28 pb-16 sm:pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
       {/* Hero Header */}
       <section className="relative overflow-hidden py-12 sm:py-16 text-center">
         <div
@@ -119,7 +175,7 @@ export default function AboutPage() {
                   Yet for years, regional businesses were forced to choose between outdated freelance templates or overpriced metro agencies in Bangalore and Chennai who never took the time to understand their real workflow bottlenecks.
                 </p>
                 <p>
-                  We founded <strong className="text-cream">Agni</strong> to permanently close that gap. We bring top-tier web engineering, clean design systems, and automated WhatsApp CRM solutions directly to the doorstep of regional businesses.
+                  We founded <strong className="text-cream">AgniGrow</strong> to permanently close that gap. We bring top-tier web engineering, clean design systems, and automated WhatsApp CRM solutions directly to the doorstep of regional businesses.
                 </p>
               </div>
             </div>
@@ -192,15 +248,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* The Agni Difference Comparison */}
+      {/* The AgniGrow Difference Comparison */}
       <section className="py-10 sm:py-16">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8">
           <div className="text-center mb-10 sm:mb-14">
             <p className="font-display text-[0.7rem] sm:text-xs font-semibold tracking-[0.2em] uppercase text-ember mb-2.5">
-              Why Choose Agni
+              Why Choose AgniGrow
             </p>
             <h2 className="font-display text-xl sm:text-3xl md:text-4xl font-extrabold text-cream mb-3 sm:mb-4">
-              The Agni Difference
+              The AgniGrow Difference
             </h2>
             <p className="text-xs sm:text-sm md:text-base text-cream-60 max-w-[540px] mx-auto">
               We ditched outdated agency habits to build a modern, transparent development partner you can trust.
@@ -217,8 +273,8 @@ export default function AboutPage() {
                   <span className="text-red-400 font-bold shrink-0">✕ Typical Agency:</span>
                   <span>{d.traditional}</span>
                 </div>
-                <div className="flex items-start gap-2.5 sm:gap-3 text-cream font-medium text-xs sm:text-sm bg-white/[0.02] p-3 rounded-lg sm:rounded-xl border border-ember/20">
-                  <span className="text-emerald-400 font-bold shrink-0">✓ With Agni:</span>
+                <div className="flex items-start gap-2.5 sm:gap-3 text-cream font-medium text-xs sm:text-sm bg-cream-05 p-3 rounded-lg sm:rounded-xl border border-ember/20">
+                  <span className="text-emerald-400 font-bold shrink-0">✓ With AgniGrow:</span>
                   <span>{d.agni}</span>
                 </div>
               </div>

@@ -212,7 +212,7 @@ export default function Portfolio() {
 
                 <div className="relative z-[1]">
                   <div className="flex items-center justify-between gap-2 mb-4">
-                    <span className="text-[0.7rem] sm:text-xs font-mono font-medium px-2.5 py-1 rounded-md bg-white/[0.04] text-ember border border-ember/20">
+                    <span className="text-[0.7rem] sm:text-xs font-mono font-medium px-2.5 py-1 rounded-md bg-cream-05 text-ember border border-ember/20">
                       📍 {project.location}
                     </span>
                     <span className="text-xs text-cream-40 font-medium">
@@ -231,7 +231,7 @@ export default function Portfolio() {
 
                 <div className="relative z-[1]">
                   {/* Highlight Metric Badge */}
-                  <div className="p-3.5 rounded-xl bg-white/[0.03] border border-cream-10 mb-5 flex items-center justify-between">
+                  <div className="p-3.5 rounded-xl bg-cream-05 border border-cream-10 mb-5 flex items-center justify-between">
                     <div>
                       <span className="text-xs text-cream-40 block font-medium">Outcome</span>
                       <span className="text-xs font-semibold text-cream">{project.metricLabel}</span>
@@ -247,7 +247,7 @@ export default function Portfolio() {
                       {project.tags.slice(0, 2).map((tag) => (
                         <span
                           key={tag}
-                          className="text-[0.72rem] font-medium px-2 py-0.5 rounded-md bg-white/[0.04] text-cream-40 border border-cream-05"
+                          className="text-[0.72rem] font-medium px-2 py-0.5 rounded-md bg-cream-05 text-cream-40 border border-cream-05"
                         >
                           {tag}
                         </span>
@@ -300,7 +300,7 @@ export default function Portfolio() {
               {/* Close Button */}
               <button
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-5 right-5 w-9 h-9 rounded-full bg-white/[0.05] hover:bg-white/[0.1] text-cream flex items-center justify-center transition-colors cursor-pointer"
+                className="absolute top-5 right-5 w-9 h-9 rounded-full bg-cream-10 hover:bg-cream-20 text-cream flex items-center justify-center transition-colors cursor-pointer"
                 aria-label="Close modal"
               >
                 ✕
@@ -314,7 +314,7 @@ export default function Portfolio() {
                 <span className="text-xs text-cream-40">
                   📍 {selectedProject.location}
                 </span>
-                <span className="text-xs px-2 py-0.5 rounded-full bg-white/[0.05] text-cream-60">
+                <span className="text-xs px-2 py-0.5 rounded-full bg-cream-10 text-cream-60">
                   ⏱️ Timeline: {selectedProject.timeline}
                 </span>
               </div>
@@ -339,7 +339,7 @@ export default function Portfolio() {
               <div className="space-y-4 mb-6">
                 <div>
                   <h4 className="text-xs uppercase font-mono tracking-wider text-red-400 font-semibold mb-1">
-                    The Problem &amp; Bottleneck
+                     The Problem &amp; Bottleneck
                   </h4>
                   <p className="text-xs sm:text-sm text-cream-60 leading-relaxed">
                     {selectedProject.challenge}
@@ -362,7 +362,7 @@ export default function Portfolio() {
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {selectedProject.deliverables.map((item) => (
-                    <div key={item} className="flex items-center gap-2 text-xs text-cream-80 bg-white/[0.02] p-2 rounded-lg border border-cream-05">
+                    <div key={item} className="flex items-center gap-2 text-xs text-cream-80 bg-cream-05 p-2 rounded-lg border border-cream-05">
                       <span className="text-emerald-400 font-bold">✓</span>
                       <span>{item}</span>
                     </div>
@@ -376,7 +376,7 @@ export default function Portfolio() {
                   {selectedProject.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-[0.7rem] px-2 py-0.5 rounded bg-white/[0.04] text-cream-40"
+                      className="text-[0.7rem] px-2 py-0.5 rounded bg-cream-05 text-cream-40"
                     >
                       {tag}
                     </span>

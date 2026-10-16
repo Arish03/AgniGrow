@@ -7,5 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
     },
     sitemap: "https://agnigrow.in/sitemap.xml",
+    host: "https://agnigrow.in",
   };
 }

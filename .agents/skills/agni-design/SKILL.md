@@ -1,15 +1,15 @@
-﻿---
+---
 name: agni-design
 description: >-
   Use this skill when designing, building, or modifying any UI component,
-  page, or section for the Agni Digital (agnix-site) Next.js project.
+  page, or section for the AgniGrow (agnigrow-site) Next.js project.
   Covers the Ember & Gold design system, component patterns, animation
   conventions, Tailwind v4 usage, and file structure rules.
 ---
 
-# Agni Digital — Design System & UI Skill
+# AgniGrow — Design System & UI Skill
 
-This skill is the single source of truth for building UI in the **agnix-site** Next.js project. Always follow these conventions to keep the codebase consistent, premium, and on-brand.
+This skill is the single source of truth for building UI in the **agnigrow-site** Next.js project. Always follow these conventions to keep the codebase consistent, premium, and on-brand.
 
 ---
 
