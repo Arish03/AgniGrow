@@ -6,13 +6,6 @@ import { motion } from "framer-motion";
 export default function HomeContactCTA() {
   return (
     <section className="py-24 relative overflow-hidden" id="contact">
-      {/* Background radial glow */}
-      <div
-        className="absolute -bottom-[20%] left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full pointer-events-none"
-        style={{
-          background: "radial-gradient(circle, rgba(255,90,31,0.12) 0%, transparent 65%)",
-        }}
-      />
 
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 relative z-[1]">
         <motion.div

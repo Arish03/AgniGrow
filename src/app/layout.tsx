@@ -30,18 +30,18 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://agnigrow.in"),
   title: {
-    default: "AgniGrow | Websites, Branding & WhatsApp Automation in Vaniyambadi",
+    default: "AgniGrow | Your Digital Growth Partner",
     template: "%s | AgniGrow",
   },
   description:
-    "AgniGrow is a premium digital agency in Vaniyambadi, Tamil Nadu. We engineer high-converting Next.js websites, brand identities, WhatsApp CRM automation, and custom software systems for regional and export businesses.",
+    "AgniGrow is Your Digital Growth Partner in Vaniyambadi, Tamil Nadu. We engineer high-converting Next.js websites, brand identities, WhatsApp CRM automation, and custom software systems for regional and export businesses.",
   applicationName: "AgniGrow",
   category: "technology",
   classification: "Digital Agency, Web Development, Automation",
   keywords: [
     "AgniGrow",
     "Agni Grow",
-    "Agni Digital",
+    "Your Digital Growth Partner",
     "Digital Agency Vaniyambadi",
     "Web Development Vaniyambadi",
     "Website Design Tamil Nadu",
@@ -75,9 +75,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "AgniGrow — Websites, Branding & WhatsApp Automation",
+    title: "AgniGrow — Your Digital Growth Partner",
     description:
-      "Transform your business with cutting-edge digital experiences, high-converting Next.js websites, and automated WhatsApp growth systems.",
+      "Your Digital Growth Partner. Transform your business with cutting-edge digital experiences, high-converting Next.js websites, and automated WhatsApp growth systems.",
     url: "https://agnigrow.in",
     siteName: "AgniGrow",
     locale: "en_IN",
@@ -88,15 +88,15 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         type: "image/png",
-        alt: "AgniGrow — Websites, Branding & Automation in Vaniyambadi, Tamil Nadu",
+        alt: "AgniGrow — Your Digital Growth Partner",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AgniGrow — Websites, Branding & WhatsApp Automation",
+    title: "AgniGrow — Your Digital Growth Partner",
     description:
-      "High-speed websites, branding, and WhatsApp CRM systems crafted to ignite business growth.",
+      "Your Digital Growth Partner — High-speed websites, branding, and WhatsApp CRM systems crafted to ignite business growth.",
     images: ["/opengraph-image"],
   },
   alternates: {

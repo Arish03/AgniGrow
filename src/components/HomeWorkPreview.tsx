@@ -3,50 +3,9 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const FEATURED_PROJECTS = [
-  {
-    title: "Global Export B2B Portal & Digital Catalog",
-    client: "Apex Leather Exports",
-    category: "Web & E-Commerce",
-    location: "Vaniyambadi",
-    metric: "+220%",
-    metricLabel: "Export Inquiries",
-    desc: "Multilingual export showroom with real-time sample requests and PDF quote generator for buyers in the UK and Europe.",
-    tags: ["Next.js", "Global SEO", "B2B Catalog"],
-  },
-  {
-    title: "Automated Patient Booking & WhatsApp Reminder CRM",
-    client: "Care Polyclinic & Diagnostics",
-    category: "WhatsApp Automation",
-    location: "Tirupattur",
-    metric: "85%",
-    metricLabel: "Fewer Missed Visits",
-    desc: "Self-service WhatsApp bot that schedules doctor consultations, delivers lab report links, and automates reminders.",
-    tags: ["WhatsApp Bot", "CRM Dashboard", "Automated Booking"],
-  },
-  {
-    title: "Smart QR Menu & POS Cloud Billing Suite",
-    client: "The Artisan Roast Cafe",
-    category: "Custom Software",
-    location: "Vaniyambadi",
-    metric: "3.2x",
-    metricLabel: "Faster Table Turns",
-    desc: "Instant table-side ordering with no app installation required, synced straight to kitchen tablets and thermal billing.",
-    tags: ["Cloud POS", "QR Ordering", "Daily Analytics"],
-  },
-];
-
 export default function HomeWorkPreview() {
   return (
-    <section className="py-24 relative overflow-hidden" id="work">
-      {/* Background glow */}
-      <div
-        className="absolute top-1/2 -right-[15%] w-[500px] h-[500px] rounded-full pointer-events-none"
-        style={{
-          background: "radial-gradient(circle, rgba(255,176,32,0.06) 0%, transparent 60%)",
-        }}
-      />
-
+    <section className="py-14 sm:py-24 relative overflow-hidden" id="work">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8">
         {/* Header */}
         <motion.div
@@ -60,72 +19,48 @@ export default function HomeWorkPreview() {
             Selected Work
           </p>
           <h2 className="font-display text-[clamp(1.8rem,5vw,3.2rem)] font-extrabold leading-tight mb-3 sm:mb-4">
-            Proven Results for <span className="text-gradient">Real Businesses</span>
+            Proven Systems Shipped for <span className="text-gradient">Real Growth</span>
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-cream-60 max-w-[620px] leading-relaxed px-2">
-            Take a look at how our custom web systems, WhatsApp automations, and brand platforms drive tangible business impact.
+          <p className="text-sm sm:text-base md:text-lg text-cream-60 max-w-[640px] leading-relaxed px-2">
+            Our portfolio of live production systems is being updated. Contact us for private walkthroughs of shipped projects.
           </p>
         </motion.div>
 
-        {/* 3 Featured Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 mb-8 sm:mb-12">
-          {FEATURED_PROJECTS.map((p, idx) => (
-            <motion.article
-              key={p.client}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1, duration: 0.5 }}
-              className="bg-bg-card border border-cream-10 rounded-xl sm:rounded-2xl p-5 sm:p-7 flex flex-col justify-between hover:border-ember/30 hover:shadow-card-hover transition-all duration-300 group"
-            >
-              <div>
-                <div className="flex items-center justify-between text-xs text-cream-40 mb-2.5 font-mono">
-                  <span className="text-ember font-semibold">{p.category}</span>
-                  <span>📍 {p.location}</span>
-                </div>
-
-                <h3 className="font-display text-base sm:text-lg font-bold text-cream mb-1.5 sm:mb-2 group-hover:text-white transition-colors">
-                  {p.title}
-                </h3>
-                <p className="text-xs text-cream-40 font-mono mb-2.5">Client: {p.client}</p>
-
-                <p className="text-xs sm:text-sm text-cream-60 leading-relaxed mb-5">
-                  {p.desc}
-                </p>
-              </div>
-
-              <div>
-                {/* Metric pill */}
-                <div className="p-2.5 sm:p-3 rounded-xl bg-cream-05 border border-cream-10 mb-3.5 flex items-center justify-between">
-                  <span className="text-xs text-cream-40">{p.metricLabel}</span>
-                  <span className="font-display text-lg sm:text-xl font-black text-gradient">
-                    {p.metric}
-                  </span>
-                </div>
-
-                <div className="flex flex-wrap gap-1.5 pt-3 border-t border-cream-05">
-                  {p.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-[0.68rem] sm:text-[0.7rem] px-2 py-0.5 rounded-md bg-cream-05 text-cream-40 border border-cream-05"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </motion.article>
-          ))}
-        </div>
-
-        {/* Link Button to Full Work Page */}
-        <div className="flex justify-center">
+        {/* Empty State Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="rounded-2xl sm:rounded-3xl bg-bg-card border border-cream-10 p-8 sm:p-12 text-center flex flex-col items-center max-w-2xl mx-auto mb-8 sm:mb-12"
+        >
+          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gold/10 border border-gold/20 flex items-center justify-center text-2xl sm:text-3xl mb-5 sm:mb-6">
+            🏗️
+          </div>
+          <h3 className="font-display text-lg sm:text-2xl font-extrabold text-cream mb-2 sm:mb-3">
+            Portfolio Being Curated
+          </h3>
+          <p className="text-xs sm:text-sm text-cream-60 max-w-[420px] leading-relaxed mb-5 sm:mb-6">
+            We&apos;re preparing detailed case studies of our latest production systems. Request a private walkthrough to see live demos.
+          </p>
           <Link
             href="/work"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 rounded-full font-display font-semibold text-xs sm:text-sm border border-cream-20 text-cream hover:border-ember hover:text-ember transition-colors text-center"
           >
-            Explore All Case Studies &amp; Projects →
+            Visit Portfolio Page →
           </Link>
+        </motion.div>
+
+        {/* Link Buttons */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a
+            href="https://wa.me/917200146914?text=Hi%20AgniGrow,%20I'd%20like%20to%20view%20live%20client%20case%20study%20demos"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 rounded-full font-display font-semibold text-xs sm:text-sm border border-emerald-500/30 text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 transition-all text-center"
+          >
+            <span>💬</span> Request Private Case Study Walkthrough
+          </a>
         </div>
       </div>
     </section>

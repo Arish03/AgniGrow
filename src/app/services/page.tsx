@@ -227,12 +227,6 @@ export default function ServicesPage() {
       />
       {/* Hero Header */}
       <section className="relative overflow-hidden py-16 text-center">
-        <div
-          className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full pointer-events-none"
-          style={{
-            background: "radial-gradient(circle, rgba(255,90,31,0.12) 0%, transparent 65%)",
-          }}
-        />
 
         <div className="max-w-[1280px] mx-auto px-6 md:px-8 relative z-[1]">
           <p className="font-display text-xs font-semibold tracking-[0.2em] uppercase text-ember mb-3">
@@ -244,18 +238,18 @@ export default function ServicesPage() {
           <p className="text-base sm:text-lg text-cream-60 max-w-[680px] mx-auto leading-relaxed mb-10">
             From your primary brand identity and high-performance website to custom ERP software and WhatsApp automation — we engineer systems that drive measurable commercial growth.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-display font-semibold text-sm gradient-ember text-bg shadow-ember hover:shadow-ember-hover hover:-translate-y-0.5 transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-display font-semibold text-sm gradient-ember text-bg shadow-ember hover:shadow-ember-hover hover:-translate-y-0.5 transition-all text-center"
             >
-              Discuss Your Project
+              Discuss Your Project →
             </Link>
             <Link
               href="/work"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-display font-semibold text-sm border border-cream-20 text-cream hover:border-ember hover:text-ember transition-colors"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full font-display font-semibold text-sm border border-cream-20 text-cream hover:border-ember hover:text-ember transition-colors text-center"
             >
-              View Our Work →
+              View Our Work
             </Link>
           </div>
         </div>

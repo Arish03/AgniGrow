@@ -115,12 +115,6 @@ export default function AboutPage() {
       />
       {/* Hero Header */}
       <section className="relative overflow-hidden py-12 sm:py-16 text-center">
-        <div
-          className="absolute top-0 left-1/2 -translate-x-1/2 w-[350px] sm:w-[720px] h-[350px] sm:h-[720px] rounded-full pointer-events-none"
-          style={{
-            background: "radial-gradient(circle, rgba(255,90,31,0.12) 0%, transparent 65%)",
-          }}
-        />
 
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 relative z-[1]">
           <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-ember/10 border border-ember/20 mb-5 sm:mb-6">

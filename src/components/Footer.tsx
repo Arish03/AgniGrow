@@ -9,6 +9,7 @@ const footerLinks = {
     { label: "Home", href: "/" },
     { label: "About AgniGrow", href: "/about" },
     { label: "Services & Capabilities", href: "/services" },
+    { label: "Pricing & Plans", href: "/pricing" },
     { label: "Selected Work & Portfolio", href: "/work" },
     { label: "How We Work (Process)", href: "/#process" },
     { label: "Client Testimonials", href: "/#testimonials" },
@@ -43,7 +44,7 @@ export default function Footer() {
             <AgniLogo width={160} />
           </Link>
           <p className="text-sm text-cream-60 max-w-[280px] leading-relaxed">
-            Digital experiences that ignite growth. High-converting websites, WhatsApp CRM automation, and bespoke software for ambitious businesses.
+            Your Digital Growth Partner. High-converting websites, WhatsApp CRM automation, and bespoke software engineered for ambitious businesses.
           </p>
           <div className="flex items-center gap-3 pt-2">
             <a
@@ -127,6 +128,7 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-6 text-xs text-cream-40">
             <Link href="/services" className="hover:text-cream">Services</Link>
+            <Link href="/pricing" className="hover:text-cream">Pricing</Link>
             <Link href="/work" className="hover:text-cream">Portfolio</Link>
             <Link href="/contact" className="hover:text-cream">Contact Us</Link>
           </div>

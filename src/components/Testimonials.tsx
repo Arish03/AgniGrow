@@ -90,14 +90,6 @@ export default function Testimonials() {
 
   return (
     <section className="py-14 sm:py-24 relative overflow-hidden" id="testimonials">
-      {/* Background radial glow */}
-      <div
-        className="absolute bottom-0 right-1/4 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] rounded-full pointer-events-none"
-        style={{
-          background: "radial-gradient(circle, rgba(255,176,32,0.06) 0%, transparent 65%)",
-        }}
-      />
-
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8">
         {/* Header */}
         <motion.div

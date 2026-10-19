@@ -11,6 +11,7 @@ const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
+  { label: "Pricing", href: "/pricing" },
   { label: "Work", href: "/work" },
   { label: "Contact", href: "/contact" },
 ];
@@ -130,18 +131,28 @@ export default function Navbar() {
               onClick={() => setMobileOpen(false)}
             />
             <motion.aside
-              className="fixed top-0 right-0 w-[80%] max-w-[320px] h-screen bg-bg-card border-l border-cream-10 z-15 flex flex-col justify-between p-8 pt-24 shadow-2xl md:hidden"
+              className="fixed top-0 right-0 w-[85%] max-w-[320px] h-screen bg-bg-card border-l border-cream-10 z-[1001] flex flex-col justify-between p-6 sm:p-8 pt-20 shadow-2xl md:hidden"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
             >
               <div className="flex flex-col gap-6">
-                <div className="flex items-center justify-between pb-2 border-b border-cream-10">
+                <div className="flex items-center justify-between pb-3 border-b border-cream-10">
                   <span className="text-xs font-mono uppercase tracking-widest text-cream-40">
                     Menu
                   </span>
-                  <ThemeToggle />
+                  <div className="flex items-center gap-3">
+                    <ThemeToggle />
+                    <button
+                      type="button"
+                      onClick={() => setMobileOpen(false)}
+                      className="w-8 h-8 rounded-full bg-cream-05 border border-cream-10 flex items-center justify-center text-cream hover:text-ember text-sm cursor-pointer"
+                      aria-label="Close menu"
+                    >
+                      ✕
+                    </button>
+                  </div>
                 </div>
 
                 <nav className="flex flex-col gap-4">

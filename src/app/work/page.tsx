@@ -73,14 +73,7 @@ export default function WorkPage() {
       />
       {/* Work Page Header */}
       <section className="relative overflow-hidden py-16 text-center">
-        <div
-          className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full pointer-events-none"
-          style={{
-            background: "radial-gradient(circle, rgba(255,176,32,0.1) 0%, transparent 65%)",
-          }}
-        />
-
-        <div className="max-w-[1280px] mx-auto px-6 md:px-8 relative z-[1]">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 relative z-[1]">
           <p className="font-display text-xs font-semibold tracking-[0.2em] uppercase text-ember mb-3">
             Case Studies &amp; Portfolio
           </p>
@@ -90,12 +83,12 @@ export default function WorkPage() {
           <p className="text-base sm:text-lg text-cream-60 max-w-[660px] mx-auto leading-relaxed mb-8">
             Explore how we build digital experiences that solve real operational bottlenecks, supercharge export inquiries, and automate customer touchpoints.
           </p>
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-display font-semibold text-sm gradient-ember text-bg shadow-ember hover:shadow-ember-hover hover:-translate-y-0.5 transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-display font-semibold text-sm gradient-ember text-bg shadow-ember hover:shadow-ember-hover hover:-translate-y-0.5 transition-all text-center"
             >
-              Discuss Your Idea
+              Discuss Your Idea →
             </Link>
           </div>
         </div>
@@ -119,7 +112,7 @@ export default function WorkPage() {
             </p>
             <Link
               href="/contact"
-              className="px-8 py-3.5 rounded-full font-display font-bold text-sm gradient-ember text-bg shadow-ember hover:shadow-ember-hover transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-full font-display font-bold text-sm gradient-ember text-bg shadow-ember hover:shadow-ember-hover transition-all text-center"
             >
               Start Your Project →
             </Link>

@@ -68,13 +68,6 @@ export default function FAQ() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      {/* Background ambient lighting */}
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[700px] h-[350px] sm:h-[700px] rounded-full pointer-events-none"
-        style={{
-          background: "radial-gradient(circle, rgba(255,90,31,0.05) 0%, transparent 65%)",
-        }}
-      />
 
       <div className="max-w-[980px] mx-auto px-4 sm:px-6 md:px-8 relative z-[1]">
         {/* Header */}

@@ -104,13 +104,6 @@ export default function Contact() {
 
   return (
     <section className="py-14 sm:py-24 relative overflow-hidden" id="contact">
-      {/* Ambient background glow */}
-      <div
-        className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] rounded-full pointer-events-none"
-        style={{
-          background: "radial-gradient(circle, rgba(255,90,31,0.06) 0%, transparent 65%)",
-        }}
-      />
 
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 relative z-[1]">
         {/* Section Header */}
