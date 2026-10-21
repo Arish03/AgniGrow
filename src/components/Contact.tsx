@@ -219,7 +219,7 @@ export default function Contact() {
 
           {/* Right form card with Interactive Project Scoper */}
           <div className="lg:col-span-7">
-            <div className="bg-bg-card border border-cream-10 rounded-2xl p-5 sm:p-8 md:p-10 shadow-2xl relative overflow-hidden">
+            <div className="bg-bg-card border border-cream-10 rounded-2xl p-4 sm:p-8 md:p-10 shadow-2xl relative overflow-hidden">
               {status === "success" ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
@@ -269,7 +269,7 @@ export default function Contact() {
                     <h3 className="font-display font-bold text-base sm:text-lg text-cream">
                       Project Scoper &amp; Inquiry
                     </h3>
-                    <span className="text-[0.7rem] sm:text-xs text-cream-40 font-mono">
+                    <span className="text-[0.68rem] sm:text-xs text-cream-40 font-mono">
                       Fast 2-min setup
                     </span>
                   </div>
@@ -282,7 +282,7 @@ export default function Contact() {
 
                   {/* 1. Service Selection Chips */}
                   <div className="flex flex-col gap-2">
-                    <label className="text-[0.72rem] sm:text-xs font-semibold uppercase tracking-wider text-cream-40">
+                    <label className="text-[0.7rem] sm:text-xs font-semibold uppercase tracking-wider text-cream-40">
                       1. Select Required Service
                     </label>
                     <div className="flex flex-wrap gap-1.5 sm:gap-2">
@@ -293,7 +293,7 @@ export default function Contact() {
                             key={svc}
                             type="button"
                             onClick={() => handleSelectOption("service", svc)}
-                            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer ${
+                            className={`px-2.5 sm:px-3 py-1.5 rounded-lg text-[0.72rem] sm:text-xs font-medium transition-all cursor-pointer ${
                               isSelected
                                 ? "bg-ember text-bg font-bold shadow-sm shadow-ember/30"
                                 : "bg-cream-05 text-cream-60 hover:text-cream border border-cream-10"
@@ -308,7 +308,7 @@ export default function Contact() {
 
                   {/* 2. Budget Selection Chips */}
                   <div className="flex flex-col gap-2">
-                    <label className="text-[0.72rem] sm:text-xs font-semibold uppercase tracking-wider text-cream-40">
+                    <label className="text-[0.7rem] sm:text-xs font-semibold uppercase tracking-wider text-cream-40">
                       2. Estimated Budget
                     </label>
                     <div className="flex flex-wrap gap-1.5 sm:gap-2">
@@ -319,7 +319,7 @@ export default function Contact() {
                             key={b}
                             type="button"
                             onClick={() => handleSelectOption("budget", b)}
-                            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer ${
+                            className={`px-2.5 sm:px-3 py-1.5 rounded-lg text-[0.72rem] sm:text-xs font-medium transition-all cursor-pointer ${
                               isSelected
                                 ? "bg-gold text-bg font-bold shadow-sm shadow-gold/30"
                                 : "bg-cream-05 text-cream-60 hover:text-cream border border-cream-10"
@@ -334,7 +334,7 @@ export default function Contact() {
 
                   {/* 3. Timeline Selection Chips */}
                   <div className="flex flex-col gap-2">
-                    <label className="text-[0.72rem] sm:text-xs font-semibold uppercase tracking-wider text-cream-40">
+                    <label className="text-[0.7rem] sm:text-xs font-semibold uppercase tracking-wider text-cream-40">
                       3. Target Launch Timeline
                     </label>
                     <div className="flex flex-wrap gap-1.5 sm:gap-2">
@@ -345,7 +345,7 @@ export default function Contact() {
                             key={time}
                             type="button"
                             onClick={() => handleSelectOption("timeline", time)}
-                            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer ${
+                            className={`px-2.5 sm:px-3 py-1.5 rounded-lg text-[0.72rem] sm:text-xs font-medium transition-all cursor-pointer ${
                               isSelected
                                 ? "bg-cream text-bg font-bold shadow-sm"
                                 : "bg-cream-05 text-cream-60 hover:text-cream border border-cream-10"

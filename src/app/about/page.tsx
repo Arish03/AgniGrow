@@ -136,7 +136,7 @@ export default function AboutPage() {
 
           <div className="flex justify-center">
             <div className="p-3 sm:p-3.5 rounded-2xl bg-bg-card border border-cream-10 inline-flex items-center gap-3">
-              <AgniLogo width={32} />
+              <AgniLogo width={110} />
               <div className="text-left">
                 <span className="font-display font-bold text-xs sm:text-sm text-cream block">
                   Agni (अग्नि)

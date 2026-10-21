@@ -49,7 +49,7 @@ export default function AgniLogo({
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
-        className="transition-colors duration-200"
+        className="transition-colors duration-200 max-w-full h-auto"
       >
         {/* A */}
         <path

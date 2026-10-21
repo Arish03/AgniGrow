@@ -4,39 +4,111 @@ import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
-const GROWTH_PLAN = {
-  id: "growth",
-  name: "Complete Digital Growth Package",
-  badge: "All-in-One Solution",
-  tagline: "High-Speed Website + WhatsApp CRM + Complete Brand Setup",
-  priceINR: "₹49,999",
-  period: "one-time investment",
-  timeline: "18–21 Days Sprint",
-  description:
-    "Everything your business needs to establish a world-class digital presence, capture leads automatically on WhatsApp, and outpace regional competitors.",
-  features: [
-    "Full Multi-Page Website (Up to 12 pages + dynamic CMS)",
-    "Sub-second Load Times (< 1.0s LCP on mobile)",
-    "Official WhatsApp Business API Bot Setup",
-    "Automated 24/7 Lead Capture & Inquiry Workflow",
-    "Bilingual Support (Tamil & English)",
-    "Complete Brand Identity: Typography, Vector Logos & Social Kit",
-    "Conversion Tracking & Custom Analytics Dashboard",
-    "Instant Lead Notifications to Staff Phones via WhatsApp",
-    "100% Mobile-First Responsive Design",
-    "Free SSL Certificate & Cloudflare CDN Setup",
-    "Dark & Light Mode Support",
-    "60 Days Dedicated Post-Launch Support & Warranty",
-  ],
-  benefits: [
-    "Save 15+ hours/week with automated WhatsApp lead triage",
-    "Capture evening and weekend leads with zero manual reception lag",
-    "Command premium market pricing with a luxury visual presence",
-    "100% code ownership with zero ongoing monthly platform fees",
-  ],
-  ctaText: "Get Started with Growth Package",
-  ctaHref: "/contact?tier=growth",
-};
+/* ═══════════════════════════════════════════════════════════════
+   Pricing Tiers
+   ═══════════════════════════════════════════════════════════════ */
+
+const TIERS = [
+  {
+    id: "starter",
+    name: "Starter Web Presence",
+    badge: "For New Brands",
+    tagline: "Professional Brochure Website + Basic Brand Kit",
+    priceINR: "₹15,000 – ₹25,000",
+    period: "one-time investment",
+    timeline: "7–12 Days Sprint",
+    description:
+      "Perfect for new businesses, freelancers, or small shops who need a professional online presence to build credibility and capture leads.",
+    features: [
+      "Responsive Brochure Website (Up to 5 pages)",
+      "Mobile-First Design with Fast Load Speed",
+      "Basic SEO Setup & Google Indexing",
+      "Contact Form with WhatsApp Redirect",
+      "Basic Logo & Brand Color Palette",
+      "SSL Certificate & Hosting Setup",
+      "Social Media Profile Kit",
+      "30 Days Post-Launch Support",
+    ],
+    benefits: [
+      "Establish instant online credibility for your business",
+      "Capture walk-in inquiries with a professional digital card",
+      "100% code ownership with zero monthly platform fees",
+    ],
+    ctaText: "Get Started",
+    ctaHref: "/contact?tier=starter",
+    highlighted: false,
+  },
+  {
+    id: "growth",
+    name: "Full Digital Growth",
+    badge: "Most Popular",
+    tagline: "High-Speed Website + WhatsApp CRM + Complete Brand Setup",
+    priceINR: "₹49,999",
+    period: "one-time investment",
+    timeline: "18–21 Days Sprint",
+    description:
+      "Everything your business needs to establish a world-class digital presence, capture leads automatically on WhatsApp, and outpace regional competitors.",
+    features: [
+      "Full Multi-Page Website (Up to 12 pages + dynamic CMS)",
+      "Sub-second Load Times (< 1.0s LCP on mobile)",
+      "Official WhatsApp Business API Bot Setup",
+      "Automated 24/7 Lead Capture & Inquiry Workflow",
+      "Bilingual Support (Tamil & English)",
+      "Complete Brand Identity: Typography, Vector Logos & Social Kit",
+      "Conversion Tracking & Custom Analytics Dashboard",
+      "Instant Lead Notifications to Staff Phones via WhatsApp",
+      "100% Mobile-First Responsive Design",
+      "Free SSL Certificate & Cloudflare CDN Setup",
+      "Dark & Light Mode Support",
+      "60 Days Dedicated Post-Launch Support & Warranty",
+    ],
+    benefits: [
+      "Save 15+ hours/week with automated WhatsApp lead triage",
+      "Capture evening and weekend leads with zero manual reception lag",
+      "Command premium market pricing with a luxury visual presence",
+      "100% code ownership with zero ongoing monthly platform fees",
+    ],
+    ctaText: "Get Started with Growth Package",
+    ctaHref: "/contact?tier=growth",
+    highlighted: true,
+  },
+  {
+    id: "enterprise",
+    name: "Custom Software & POS",
+    badge: "Enterprise",
+    tagline: "Bespoke ERP, Billing POS, or Multi-Branch Automation",
+    priceINR: "On Inquiry",
+    period: "custom quote",
+    timeline: "Scoped per project",
+    description:
+      "For businesses that need purpose-built software — cloud billing systems, GST-compliant POS, multi-branch inventory sync, or custom ERP solutions.",
+    features: [
+      "Custom Cloud POS with Thermal Receipt Printing",
+      "GST-Compliant Invoice Generation",
+      "Multi-Branch Real-Time Inventory Sync",
+      "QR-Based Table/Counter Ordering Systems",
+      "Custom ERP Modules (HR, Payroll, Logistics)",
+      "WhatsApp Daily P&L Reports to Owner",
+      "Role-Based Staff Access & Audit Logs",
+      "Dedicated Account Manager & Priority Support",
+      "On-Site Installation & Staff Training",
+      "Annual Maintenance & Feature Upgrade Plans",
+    ],
+    benefits: [
+      "Eliminate paper-based billing errors and GST miscalculations",
+      "Real-time visibility across all branches from one dashboard",
+      "Fully custom-built to your exact workflow, not a generic template",
+      "On-premise or cloud deployment — your choice, your data",
+    ],
+    ctaText: "Request Custom Quote",
+    ctaHref: "/contact?tier=enterprise",
+    highlighted: false,
+  },
+];
+
+/* ═══════════════════════════════════════════════════════════════
+   Why Choose AgniGrow Pillars
+   ═══════════════════════════════════════════════════════════════ */
 
 const PILLARS = [
   {
@@ -61,6 +133,10 @@ const PILLARS = [
   },
 ];
 
+/* ═══════════════════════════════════════════════════════════════
+   FAQ
+   ═══════════════════════════════════════════════════════════════ */
+
 const FAQS = [
   {
     q: "Why one-time pricing instead of monthly subscriptions?",
@@ -76,13 +152,26 @@ const FAQS = [
   },
   {
     q: "How fast can we launch?",
-    a: "Our Growth platforms launch in 18–21 business days. We work in dedicated agile sprints to guarantee timely delivery.",
+    a: "Starter packages launch in 7–12 days, Growth platforms in 18–21 business days. Custom Software projects are scoped individually. We work in dedicated agile sprints to guarantee timely delivery.",
   },
   {
     q: "Do you provide hosting and ongoing technical maintenance?",
-    a: "Yes. All plans include 60 days of complimentary post-launch support and warranty. After that, we offer optional lightweight annual care plans covering security updates, domain management, and high-speed hosting.",
+    a: "Yes. All plans include post-launch support (30 days for Starter, 60 days for Growth). After that, we offer optional lightweight annual care plans covering security updates, domain management, and high-speed hosting.",
+  },
+  {
+    q: "What's the difference between Starter and Growth?",
+    a: "Starter is a professional brochure website with basic brand setup — perfect for establishing online presence. Growth includes everything in Starter plus WhatsApp CRM automation, advanced analytics, bilingual support, full brand identity, and 60-day support. It's our most popular choice for businesses ready to scale.",
   },
 ];
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.14, duration: 0.7, ease: [0.16, 1, 0.3, 1] as const },
+  }),
+};
 
 export default function PricingSection() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -90,134 +179,132 @@ export default function PricingSection() {
   return (
     <section className="relative py-10 sm:py-16 overflow-hidden" id="pricing-plans">
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 relative z-[1]">
-        {/* Single Pricing Card — Centered & Clean */}
-        <div className="flex justify-center mb-14 sm:mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="relative rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-10 flex flex-col justify-between bg-bg-card border-2 border-ember shadow-[0_0_35px_rgba(255,90,31,0.15)] w-full max-w-xl"
-          >
-            {/* Popular Pill */}
-            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-              <span className="inline-flex items-center gap-1.5 px-4 py-1 rounded-full gradient-ember text-bg font-display text-[0.7rem] sm:text-xs font-bold uppercase tracking-wider shadow-ember">
-                <span>★</span> {GROWTH_PLAN.badge}
-              </span>
-            </div>
-
-            <div>
-              {/* Header info */}
-              <div className="border-b border-cream-10 pb-5 sm:pb-6 mb-5 sm:mb-6 pt-2">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-                  <h3 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-cream">
-                    {GROWTH_PLAN.name}
-                  </h3>
-                  <span className="text-[0.68rem] font-mono px-2.5 py-1 rounded-md bg-cream-05 text-cream-60 border border-cream-10 shrink-0 w-fit">
-                    {GROWTH_PLAN.timeline}
+        {/* ─── 3-Tier Pricing Grid ─── */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 mb-14 sm:mb-20">
+          {TIERS.map((tier, i) => (
+            <motion.div
+              key={tier.id}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={i}
+              className={`relative rounded-2xl sm:rounded-3xl p-4 sm:p-7 md:p-8 flex flex-col justify-between bg-bg-card transition-all duration-300 ${
+                tier.highlighted
+                  ? "border-2 border-ember shadow-[0_0_35px_rgba(255,90,31,0.15)] lg:scale-[1.03] z-10"
+                  : "border border-cream-10 hover:border-ember/20 hover:shadow-card-hover"
+              }`}
+            >
+              {/* Badge Pill */}
+              {tier.highlighted ? (
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
+                  <span className="inline-flex items-center gap-1.5 px-4 py-1 rounded-full gradient-ember text-bg font-display text-[0.7rem] sm:text-xs font-bold uppercase tracking-wider shadow-ember">
+                    <span>★</span> {tier.badge}
                   </span>
                 </div>
+              ) : (
+                <div className="mb-2">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cream-05 border border-cream-10 font-display text-[0.65rem] sm:text-xs font-semibold uppercase tracking-wider text-cream-60">
+                    {tier.badge}
+                  </span>
+                </div>
+              )}
 
-                <p className="text-xs sm:text-sm text-cream-60 mb-4 sm:mb-5 leading-relaxed">
-                  {GROWTH_PLAN.tagline}
+              <div>
+                {/* Header info */}
+                <div className={`border-b border-cream-10 pb-5 sm:pb-6 mb-5 sm:mb-6 ${tier.highlighted ? "pt-3" : "pt-1"}`}>
+                  <div className="flex flex-col gap-1 mb-2">
+                    <h3 className="font-display text-lg sm:text-xl md:text-2xl font-bold text-cream">
+                      {tier.name}
+                    </h3>
+                    <span className="text-[0.68rem] font-mono px-2 py-0.5 rounded-md bg-cream-05 text-cream-60 border border-cream-10 w-fit">
+                      {tier.timeline}
+                    </span>
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-cream-60 mb-4 leading-relaxed">
+                    {tier.tagline}
+                  </p>
+
+                  {/* Price display */}
+                  <div className="flex items-baseline gap-2 flex-wrap">
+                    <span className={`font-display font-black text-gradient ${
+                      tier.id === "enterprise"
+                        ? "text-xl sm:text-3xl"
+                        : "text-[clamp(1.5rem,6vw,2.75rem)]"
+                    }`}>
+                      {tier.priceINR}
+                    </span>
+                    <span className="text-[0.65rem] text-cream-40 uppercase tracking-widest font-mono">
+                      {tier.period}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Summary */}
+                <p className="text-xs sm:text-sm text-cream-60 leading-relaxed mb-5">
+                  {tier.description}
                 </p>
 
-                {/* Price display */}
-                <div className="flex items-baseline gap-2">
-                  <span className="font-display text-4xl sm:text-5xl md:text-6xl font-black text-gradient">
-                    {GROWTH_PLAN.priceINR}
-                  </span>
-                  <span className="text-xs text-cream-40 uppercase tracking-widest font-mono">
-                    {GROWTH_PLAN.period}
-                  </span>
+                {/* Key Benefits */}
+                <div className="rounded-xl bg-ember/5 border border-ember/15 p-3 sm:p-4 mb-5">
+                  <h4 className="font-display text-[0.65rem] sm:text-[0.7rem] uppercase tracking-wider font-bold text-ember mb-2 flex items-center gap-1.5">
+                    <span>⚡</span> Key Business Benefits
+                  </h4>
+                  <ul className="space-y-1.5 sm:space-y-2">
+                    {tier.benefits.map((benefit, bi) => (
+                      <li key={bi} className="text-[0.7rem] sm:text-xs text-cream-60 flex items-start gap-2">
+                        <span className="text-gold mt-0.5 shrink-0">✦</span>
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Features List */}
+                <div className="mb-6">
+                  <h4 className="font-display text-[0.7rem] uppercase tracking-wider font-semibold text-cream-60 mb-3">
+                    What&apos;s Included:
+                  </h4>
+                  <ul className="space-y-2">
+                    {tier.features.map((feat, fi) => (
+                      <li key={fi} className="text-[0.7rem] sm:text-xs text-cream flex items-start gap-2">
+                        <svg
+                          className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth="2.5"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span className="leading-snug">{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
 
-              {/* Summary */}
-              <p className="text-xs sm:text-sm text-cream-60 leading-relaxed mb-5 sm:mb-6">
-                {GROWTH_PLAN.description}
-              </p>
-
-              {/* Key Benefits */}
-              <div className="rounded-xl bg-ember/5 border border-ember/15 p-4 sm:p-5 mb-5 sm:mb-6">
-                <h4 className="font-display text-[0.7rem] uppercase tracking-wider font-bold text-ember mb-2.5 flex items-center gap-1.5">
-                  <span>⚡</span> Key Business Benefits
-                </h4>
-                <ul className="space-y-2">
-                  {GROWTH_PLAN.benefits.map((benefit, i) => (
-                    <li key={i} className="text-xs sm:text-sm text-cream-60 flex items-start gap-2">
-                      <span className="text-gold mt-0.5 shrink-0">✦</span>
-                      <span>{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
+              {/* CTA Button */}
+              <div className="pt-4 border-t border-cream-05">
+                <Link
+                  href={tier.ctaHref}
+                  className={`w-full inline-flex items-center justify-center gap-2 py-3 sm:py-3.5 px-6 rounded-full font-display font-bold text-xs sm:text-sm tracking-wide transition-all duration-200 text-center ${
+                    tier.highlighted
+                      ? "gradient-ember text-bg shadow-ember hover:shadow-ember-hover hover:-translate-y-0.5 active:translate-y-0"
+                      : tier.id === "enterprise"
+                        ? "border border-gold/40 text-gold hover:bg-gold/10"
+                        : "border border-ember/30 bg-ember/5 text-cream hover:border-ember hover:bg-ember/15"
+                  }`}
+                >
+                  {tier.ctaText} →
+                </Link>
               </div>
-
-              {/* Features List */}
-              <div className="mb-6 sm:mb-8">
-                <h4 className="font-display text-[0.75rem] uppercase tracking-wider font-semibold text-cream-60 mb-3.5">
-                  What&apos;s Included:
-                </h4>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2.5">
-                  {GROWTH_PLAN.features.map((feat, i) => (
-                    <li key={i} className="text-xs sm:text-sm text-cream flex items-start gap-2.5">
-                      <svg
-                        className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span className="leading-snug">{feat}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            {/* CTA Button */}
-            <div className="pt-4 border-t border-cream-05">
-              <Link
-                href={GROWTH_PLAN.ctaHref}
-                className="w-full inline-flex items-center justify-center gap-2 py-3.5 sm:py-4 px-6 rounded-full font-display font-bold text-xs sm:text-sm tracking-wide transition-all duration-200 text-center gradient-ember text-bg shadow-ember hover:shadow-ember-hover hover:-translate-y-0.5 active:translate-y-0"
-              >
-                {GROWTH_PLAN.ctaText} →
-              </Link>
-            </div>
-          </motion.div>
+            </motion.div>
+          ))}
         </div>
 
-        {/* Custom Requirement Callout */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="rounded-2xl sm:rounded-3xl bg-bg-card border border-cream-10 p-5 sm:p-8 md:p-10 mb-14 sm:mb-20 flex flex-col md:flex-row items-center justify-between gap-6"
-        >
-          <div className="max-w-2xl text-center md:text-left">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/20 text-gold text-[0.7rem] font-display font-semibold uppercase tracking-wider mb-2.5">
-              Custom Requirements
-            </span>
-            <h3 className="font-display text-xl sm:text-2xl md:text-3xl font-extrabold text-cream mb-2">
-              Need Custom Software, Billing POS, or Multi-Branch Systems?
-            </h3>
-            <p className="text-xs sm:text-sm text-cream-60 leading-relaxed">
-              We also build custom ERP solutions, retail billing software, and custom automated workflows tailored to your specific operations.
-            </p>
-          </div>
-          <div className="shrink-0 w-full md:w-auto">
-            <Link
-              href="/contact?tier=enterprise"
-              className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 rounded-full font-display font-bold text-xs sm:text-sm border border-gold/40 text-gold hover:bg-gold/10 transition-all text-center"
-            >
-              Request Custom Quote →
-            </Link>
-          </div>
-        </motion.div>
-
-        {/* Why Choose AgniGrow */}
+        {/* ─── Why Choose AgniGrow ─── */}
         <div className="mb-14 sm:mb-20">
           <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
             <p className="font-display text-xs font-semibold tracking-[0.2em] uppercase text-ember mb-2">
@@ -255,7 +342,7 @@ export default function PricingSection() {
           </div>
         </div>
 
-        {/* FAQ Accordion */}
+        {/* ─── FAQ Accordion ─── */}
         <div className="max-w-3xl mx-auto mb-12 sm:mb-16">
           <div className="text-center mb-8 sm:mb-10">
             <p className="font-display text-xs font-semibold tracking-[0.2em] uppercase text-ember mb-2">
@@ -303,7 +390,7 @@ export default function PricingSection() {
           </div>
         </div>
 
-        {/* Bottom Booking Consultation Banner */}
+        {/* ─── Bottom Booking Consultation Banner ─── */}
         <div className="rounded-2xl sm:rounded-3xl bg-bg-card border border-ember/25 p-6 sm:p-8 md:p-12 text-center max-w-4xl mx-auto flex flex-col items-center">
           <span className="font-display text-xs font-bold uppercase tracking-widest text-ember mb-2">
             Free Consultation

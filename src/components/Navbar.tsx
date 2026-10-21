@@ -51,11 +51,13 @@ export default function Navbar() {
       <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 flex items-center justify-between">
         {/* Brand Logo on Left */}
         <Link href="/" className="relative z-20 outline-none shrink-0" aria-label="AgniGrow home">
-          <AgniLogo size={28} showText={true} />
+          <div className="w-[140px] sm:w-[185px] md:w-[220px]">
+            <AgniLogo size={28} showText={true} />
+          </div>
         </Link>
 
         {/* Right-aligned Group: Links + Theme Toggle + WhatsApp */}
-        <div className="flex items-center gap-2.5 sm:gap-4 md:gap-7 ml-auto">
+        <div className="flex items-center gap-2 sm:gap-4 md:gap-7 ml-auto shrink-0">
           {/* Desktop Navigation Links */}
           <nav aria-label="Main Navigation" className="hidden md:flex items-center gap-6 lg:gap-7">
             {NAV_LINKS.map((l) => {
@@ -88,30 +90,30 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Direct WhatsApp Chat"
-            className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-display font-semibold text-[0.75rem] sm:text-xs tracking-wider bg-emerald-600 hover:bg-emerald-500 text-white shadow-md shadow-emerald-950/25 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200"
+            className="inline-flex items-center gap-1.5 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full font-display font-semibold text-[0.72rem] sm:text-xs tracking-wider bg-emerald-600 hover:bg-emerald-500 text-white shadow-md shadow-emerald-950/25 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 shrink-0"
           >
-            <span>💬</span> <span className="hidden xs:inline sm:inline">WhatsApp</span>
+            <span>💬</span> <span className="hidden sm:inline">WhatsApp</span>
           </a>
 
           {/* Mobile Burger Button */}
           <button
-            className="flex md:hidden flex-col justify-center gap-[5px] w-8 h-8 z-20 outline-none cursor-pointer"
+            className="flex md:hidden flex-col justify-center items-center gap-[5px] w-9 h-9 p-1 z-20 outline-none cursor-pointer rounded-lg hover:bg-cream-05 transition-colors shrink-0"
             onClick={() => setMobileOpen((v) => !v)}
             aria-label="Toggle menu"
             id="menu-toggle"
           >
             <span
-              className={`block w-6 h-0.5 bg-cream rounded-sm transition-all duration-200 origin-center ${
+              className={`block w-5 h-0.5 bg-cream rounded-sm transition-all duration-200 origin-center ${
                 mobileOpen ? "translate-y-[7px] rotate-45" : ""
               }`}
             />
             <span
-              className={`block w-4 h-0.5 bg-ember rounded-sm transition-all duration-200 ${
+              className={`block w-3.5 h-0.5 bg-ember rounded-sm transition-all duration-200 ${
                 mobileOpen ? "opacity-0" : ""
               }`}
             />
             <span
-              className={`block w-6 h-0.5 bg-cream rounded-sm transition-all duration-200 origin-center ${
+              className={`block w-5 h-0.5 bg-cream rounded-sm transition-all duration-200 origin-center ${
                 mobileOpen ? "-translate-y-[7px] -rotate-45" : ""
               }`}
             />
@@ -131,7 +133,7 @@ export default function Navbar() {
               onClick={() => setMobileOpen(false)}
             />
             <motion.aside
-              className="fixed top-0 right-0 w-[85%] max-w-[320px] h-screen bg-bg-card border-l border-cream-10 z-[1001] flex flex-col justify-between p-6 sm:p-8 pt-20 shadow-2xl md:hidden"
+              className="fixed top-0 right-0 w-[85%] max-w-[320px] h-[100dvh] overflow-y-auto bg-bg-card border-l border-cream-10 z-[1001] flex flex-col justify-between p-6 sm:p-8 pt-16 sm:pt-20 shadow-2xl md:hidden"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}

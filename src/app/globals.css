@@ -59,7 +59,7 @@ html.light .agni-logo-letter,
 
   /* ── Fonts ─── */
   --font-display: var(--font-display), 'Outfit', sans-serif;
-  --font-body: var(--font-body), 'Inter', sans-serif;
+  --font-body: var(--font-body), var(--font-tamil), 'Inter', 'Noto Sans Tamil', sans-serif;
 
   /* ── Animations ─── */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
@@ -76,6 +76,7 @@ html.light .agni-logo-letter,
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
 
   body {

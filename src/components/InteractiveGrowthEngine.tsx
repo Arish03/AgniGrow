@@ -133,7 +133,7 @@ export default function InteractiveGrowthEngine() {
           </p>
 
           {/* Module Selector Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 mt-8 p-1.5 rounded-2xl bg-bg-card border border-cream-10">
+          <div className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-1.5 sm:gap-2 mt-6 sm:mt-8 p-1.5 rounded-2xl bg-bg-card border border-cream-10 w-full sm:w-auto">
             {[
               { id: "speed", label: "⚡ Sub-Second Speed", pill: "Next.js 16" },
               { id: "whatsapp", label: "💬 WhatsApp CRM", pill: "Auto Triage" },
@@ -147,7 +147,7 @@ export default function InteractiveGrowthEngine() {
                   type="button"
                   onClick={() => setActiveTab(tab.id as EngineModule)}
                   className={cn(
-                    "px-4 sm:px-5 py-2.5 rounded-xl font-display text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer flex items-center gap-2",
+                    "px-2.5 sm:px-5 py-2 sm:py-2.5 rounded-xl font-display text-[0.7rem] sm:text-sm font-semibold transition-all duration-200 cursor-pointer flex items-center justify-center gap-1 sm:gap-2 text-center",
                     isActive
                       ? "gradient-ember text-bg shadow-ember"
                       : "text-cream-60 hover:text-cream hover:bg-cream-05"
@@ -174,16 +174,16 @@ export default function InteractiveGrowthEngine() {
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.35 }}
-          className="rounded-3xl bg-bg-card/80 backdrop-blur-2xl border border-cream-10 p-6 sm:p-10 shadow-2xl relative overflow-hidden"
+          className="rounded-2xl sm:rounded-3xl bg-bg-card/80 backdrop-blur-2xl border border-cream-10 p-4 sm:p-8 md:p-10 shadow-2xl relative overflow-hidden"
         >
           {/* Module 1: Speed & Web Architecture */}
           {activeTab === "speed" && (
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              <div className="lg:col-span-6 flex flex-col gap-4">
-                <span className="font-mono text-xs text-ember uppercase tracking-wider font-semibold">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+              <div className="lg:col-span-6 flex flex-col gap-3.5 sm:gap-4">
+                <span className="font-mono text-[0.7rem] sm:text-xs text-ember uppercase tracking-wider font-semibold">
                   Module 01 · Velocity Benchmark
                 </span>
-                <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-cream">
+                <h3 className="font-display text-xl sm:text-2xl md:text-3xl font-extrabold text-cream leading-snug">
                   Sub-Second Page Load vs. Bloated Legacy Sites
                 </h3>
                 <p className="text-xs sm:text-sm text-cream-60 leading-relaxed">
@@ -195,14 +195,14 @@ export default function InteractiveGrowthEngine() {
                     type="button"
                     onClick={runSpeedBenchmark}
                     disabled={isSimulating}
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-display font-semibold text-xs sm:text-sm gradient-ember text-bg shadow-ember hover:shadow-ember-hover active:scale-95 transition-all cursor-pointer"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-display font-semibold text-xs sm:text-sm gradient-ember text-bg shadow-ember hover:shadow-ember-hover active:scale-95 transition-all cursor-pointer text-center"
                   >
                     <span>⚡</span> {isSimulating ? "Benchmarking Core Vitals..." : "Run Live Speed Benchmark"}
                   </button>
                 </div>
               </div>
 
-              <div className="lg:col-span-6 bg-cream-05 rounded-2xl p-6 border border-cream-10 flex flex-col gap-5">
+              <div className="lg:col-span-6 bg-cream-05 rounded-2xl p-4 sm:p-6 border border-cream-10 flex flex-col gap-4 sm:gap-5">
                 {/* Benchmark Metric Bars */}
                 <div>
                   <div className="flex justify-between text-xs font-mono mb-1.5">
@@ -227,18 +227,18 @@ export default function InteractiveGrowthEngine() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-3 gap-3 pt-3 border-t border-cream-10 text-center">
-                  <div className="p-2.5 rounded-xl bg-bg-card border border-cream-10">
-                    <span className="font-display text-lg font-black text-gradient block">100</span>
-                    <span className="text-[0.65rem] text-cream-40 uppercase tracking-wider font-mono">Performance</span>
+                <div className="grid grid-cols-3 gap-1.5 sm:gap-3 pt-3 border-t border-cream-10 text-center">
+                  <div className="p-2 sm:p-2.5 rounded-xl bg-bg-card border border-cream-10">
+                    <span className="font-display text-base sm:text-lg font-black text-gradient block">100</span>
+                    <span className="text-[0.6rem] sm:text-[0.65rem] text-cream-40 uppercase tracking-wider font-mono">Performance</span>
                   </div>
-                  <div className="p-2.5 rounded-xl bg-bg-card border border-cream-10">
-                    <span className="font-display text-lg font-black text-gradient block">0.6s</span>
-                    <span className="text-[0.65rem] text-cream-40 uppercase tracking-wider font-mono">LCP Target</span>
+                  <div className="p-2 sm:p-2.5 rounded-xl bg-bg-card border border-cream-10">
+                    <span className="font-display text-base sm:text-lg font-black text-gradient block">0.6s</span>
+                    <span className="text-[0.6rem] sm:text-[0.65rem] text-cream-40 uppercase tracking-wider font-mono">LCP Target</span>
                   </div>
-                  <div className="p-2.5 rounded-xl bg-bg-card border border-cream-10">
-                    <span className="font-display text-lg font-black text-gradient block">0ms</span>
-                    <span className="text-[0.65rem] text-cream-40 uppercase tracking-wider font-mono">Layout Shift</span>
+                  <div className="p-2 sm:p-2.5 rounded-xl bg-bg-card border border-cream-10">
+                    <span className="font-display text-base sm:text-lg font-black text-gradient block">0ms</span>
+                    <span className="text-[0.6rem] sm:text-[0.65rem] text-cream-40 uppercase tracking-wider font-mono">Layout Shift</span>
                   </div>
                 </div>
               </div>
@@ -299,10 +299,10 @@ export default function InteractiveGrowthEngine() {
                 </div>
               </div>
 
-              <div className="lg:col-span-6 bg-bg-card rounded-2xl p-5 border border-emerald-500/30 shadow-xl flex flex-col gap-3 font-sans">
+              <div className="lg:col-span-6 bg-bg-card rounded-2xl p-4 sm:p-5 border border-emerald-500/30 shadow-xl flex flex-col gap-3 font-sans">
                 <div className="flex items-center justify-between pb-3 border-b border-cream-10">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center text-white font-bold text-xs">
+                  <div className="flex items-center gap-2 sm:gap-2.5">
+                    <div className="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center text-white font-bold text-xs shrink-0">
                       AG
                     </div>
                     <div>
@@ -315,7 +315,7 @@ export default function InteractiveGrowthEngine() {
 
                 <div className="space-y-2.5 text-xs py-2 min-h-[170px]">
                   <div className="flex justify-end">
-                    <div className="bg-emerald-600/30 border border-emerald-500/30 text-cream p-3 rounded-2xl rounded-tr-none max-w-[80%] leading-relaxed">
+                    <div className="bg-emerald-600/30 border border-emerald-500/30 text-cream p-3 rounded-2xl rounded-tr-none max-w-[88%] sm:max-w-[80%] leading-relaxed text-xs">
                       Hi, I need quotation for 5,000 finished leather shoe upper pieces with UK export specs.
                     </div>
                   </div>
@@ -326,7 +326,7 @@ export default function InteractiveGrowthEngine() {
                       animate={{ opacity: 1, y: 0 }}
                       className="flex justify-start"
                     >
-                      <div className="bg-cream-05 border border-cream-10 text-cream p-3 rounded-2xl rounded-tl-none max-w-[85%] leading-relaxed">
+                      <div className="bg-cream-05 border border-cream-10 text-cream p-3 rounded-2xl rounded-tl-none max-w-[90%] sm:max-w-[85%] leading-relaxed text-xs">
                         <p className="text-gold font-bold mb-1">⚡ Inquiry Verified:</p>
                         <p>Export Volume: 5,000 units · Destination: UK (GBP). Generating instant spec sheet &amp; notifying sales director.</p>
                       </div>
@@ -339,7 +339,7 @@ export default function InteractiveGrowthEngine() {
                       animate={{ opacity: 1, y: 0 }}
                       className="flex justify-start"
                     >
-                      <div className="bg-cream-05 border border-emerald-500/40 text-cream p-3 rounded-2xl rounded-tl-none max-w-[85%] leading-relaxed">
+                      <div className="bg-cream-05 border border-emerald-500/40 text-cream p-3 rounded-2xl rounded-tl-none max-w-[90%] sm:max-w-[85%] leading-relaxed text-xs">
                         📄 <span className="font-semibold text-emerald-400">UK_Leather_Specs_Quotation.pdf</span>
                         <p className="text-[0.68rem] text-cream-40 mt-1">Generated dynamically · Dispatched in 0.4s</p>
                       </div>
@@ -347,7 +347,7 @@ export default function InteractiveGrowthEngine() {
                   )}
                 </div>
 
-                <div className="pt-2 border-t border-cream-05 flex items-center justify-between text-[0.7rem] text-cream-40 font-mono">
+                <div className="pt-2 border-t border-cream-05 flex items-center justify-between text-[0.68rem] sm:text-[0.7rem] text-cream-40 font-mono">
                   <span>⚡ 0.2s Response Latency</span>
                   <span>100% Delivery Rate</span>
                 </div>
@@ -357,19 +357,19 @@ export default function InteractiveGrowthEngine() {
 
           {/* Module 3: Export Showroom & Multi-Currency */}
           {activeTab === "export" && (
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              <div className="lg:col-span-6 flex flex-col gap-4">
-                <span className="font-mono text-xs text-gold uppercase tracking-wider font-semibold">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+              <div className="lg:col-span-6 flex flex-col gap-3.5 sm:gap-4">
+                <span className="font-mono text-[0.7rem] sm:text-xs text-gold uppercase tracking-wider font-semibold">
                   Module 03 · International B2B Commerce
                 </span>
-                <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-cream">
+                <h3 className="font-display text-xl sm:text-2xl md:text-3xl font-extrabold text-cream leading-snug">
                   B2B Showrooms Engineered for European &amp; American Buyers
                 </h3>
                 <p className="text-xs sm:text-sm text-cream-60 leading-relaxed">
                   International buyers demand instant pricing calculations in their local currency and downloadable technical spec sheets. Our B2B portals bridge regional manufacturers to global trade seamlessly.
                 </p>
 
-                <div className="flex items-center gap-2 pt-2">
+                <div className="flex flex-wrap items-center gap-2 pt-2">
                   <span className="text-xs text-cream-60 font-mono">Switch Buyer Currency:</span>
                   {(["EUR", "USD", "GBP"] as const).map((c) => (
                     <button
@@ -389,21 +389,21 @@ export default function InteractiveGrowthEngine() {
                 </div>
               </div>
 
-              <div className="lg:col-span-6 bg-cream-05 rounded-2xl p-6 border border-cream-10">
-                <div className="flex items-center justify-between pb-4 border-b border-cream-10 mb-4">
+              <div className="lg:col-span-6 bg-cream-05 rounded-2xl p-4 sm:p-6 border border-cream-10">
+                <div className="flex items-center justify-between pb-4 border-b border-cream-10 mb-4 gap-2">
                   <div>
                     <span className="text-[0.65rem] font-mono text-gold uppercase tracking-wider block">
                       Live Sample Calculation
                     </span>
-                    <h4 className="font-display text-base font-bold text-cream">
+                    <h4 className="font-display text-sm sm:text-base font-bold text-cream">
                       Full-Grain Calfskin Crust (Grade A)
                     </h4>
                   </div>
-                  <div className="text-right">
-                    <span className="font-display text-xl sm:text-2xl font-black text-gradient">
+                  <div className="text-right shrink-0">
+                    <span className="font-display text-lg sm:text-2xl font-black text-gradient">
                       {currency === "EUR" ? "€ 14,800" : currency === "USD" ? "$ 16,200" : "£ 12,900"}
                     </span>
-                    <span className="text-[0.65rem] font-mono text-cream-40 block">CIF Export Order</span>
+                    <span className="text-[0.62rem] sm:text-[0.65rem] font-mono text-cream-40 block">CIF Export Order</span>
                   </div>
                 </div>
 
@@ -436,55 +436,55 @@ export default function InteractiveGrowthEngine() {
 
           {/* Module 4: Cloud Infrastructure & 99.99% Uptime */}
           {activeTab === "cloud" && (
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-              <div className="lg:col-span-6 flex flex-col gap-4">
-                <span className="font-mono text-xs text-cyan-400 uppercase tracking-wider font-semibold">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+              <div className="lg:col-span-6 flex flex-col gap-3.5 sm:gap-4">
+                <span className="font-mono text-[0.7rem] sm:text-xs text-cyan-400 uppercase tracking-wider font-semibold">
                   Module 04 · Enterprise Reliability
                 </span>
-                <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-cream">
+                <h3 className="font-display text-xl sm:text-2xl md:text-3xl font-extrabold text-cream leading-snug">
                   Serverless Cloud Resilience with Zero Downtime
                 </h3>
                 <p className="text-xs sm:text-sm text-cream-60 leading-relaxed">
                   Deployed on globally distributed edge networks across 300+ cities. Automatic failover, DDoS mitigation, and daily encrypted backups ensure your digital storefront operates reliably 24/7/365.
                 </p>
 
-                <div className="grid grid-cols-2 gap-3 pt-2">
+                <div className="grid grid-cols-2 gap-2.5 sm:gap-3 pt-2">
                   <div className="p-3 rounded-xl bg-cream-05 border border-cream-10">
-                    <span className="text-xs text-cream-40 uppercase tracking-widest block font-mono">Uptime SLA</span>
-                    <span className="font-display text-lg font-bold text-emerald-400">99.99%</span>
+                    <span className="text-[0.65rem] sm:text-xs text-cream-40 uppercase tracking-widest block font-mono">Uptime SLA</span>
+                    <span className="font-display text-base sm:text-lg font-bold text-emerald-400">99.99%</span>
                   </div>
                   <div className="p-3 rounded-xl bg-cream-05 border border-cream-10">
-                    <span className="text-xs text-cream-40 uppercase tracking-widest block font-mono">Global Edge CDN</span>
-                    <span className="font-display text-lg font-bold text-gold">300+ Nodes</span>
+                    <span className="text-[0.65rem] sm:text-xs text-cream-40 uppercase tracking-widest block font-mono">Global Edge CDN</span>
+                    <span className="font-display text-base sm:text-lg font-bold text-gold">300+ Nodes</span>
                   </div>
                 </div>
               </div>
 
-              <div className="lg:col-span-6 bg-cream-05 rounded-2xl p-6 border border-cream-10 flex flex-col gap-4 font-mono text-xs">
-                <div className="flex items-center justify-between pb-3 border-b border-cream-10">
-                  <span className="text-cream font-bold">Live Cloud Node Telemetry</span>
-                  <span className="text-emerald-400 flex items-center gap-1.5">
+              <div className="lg:col-span-6 bg-cream-05 rounded-2xl p-4 sm:p-6 border border-cream-10 flex flex-col gap-3.5 sm:gap-4 font-mono text-[0.72rem] sm:text-xs">
+                <div className="flex items-center justify-between pb-3 border-b border-cream-10 gap-2">
+                  <span className="text-cream font-bold">Cloud Node Telemetry</span>
+                  <span className="text-emerald-400 flex items-center gap-1.5 shrink-0 text-[0.65rem] sm:text-xs">
                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                    ALL SYSTEMS NOMINAL
+                    ALL NOMINAL
                   </span>
                 </div>
 
                 <div className="space-y-2 text-cream-60">
-                  <div className="flex justify-between p-2 rounded bg-bg-card border border-cream-05">
-                    <span>Edge Routing: Asia-South (Chennai / Mumbai)</span>
-                    <span className="text-emerald-400 font-bold">12ms</span>
+                  <div className="flex items-center justify-between gap-2 p-2 rounded bg-bg-card border border-cream-05">
+                    <span className="truncate">Asia-South (Chennai / Mumbai)</span>
+                    <span className="text-emerald-400 font-bold shrink-0">12ms</span>
                   </div>
-                  <div className="flex justify-between p-2 rounded bg-bg-card border border-cream-05">
-                    <span>Edge Routing: Europe-West (Frankfurt / London)</span>
-                    <span className="text-emerald-400 font-bold">48ms</span>
+                  <div className="flex items-center justify-between gap-2 p-2 rounded bg-bg-card border border-cream-05">
+                    <span className="truncate">Europe-West (Frankfurt / London)</span>
+                    <span className="text-emerald-400 font-bold shrink-0">48ms</span>
                   </div>
-                  <div className="flex justify-between p-2 rounded bg-bg-card border border-cream-05">
+                  <div className="flex items-center justify-between gap-2 p-2 rounded bg-bg-card border border-cream-05">
                     <span>Database Query Latency</span>
-                    <span className="text-emerald-400 font-bold">4.2ms</span>
+                    <span className="text-emerald-400 font-bold shrink-0">4.2ms</span>
                   </div>
-                  <div className="flex justify-between p-2 rounded bg-bg-card border border-cream-05">
+                  <div className="flex items-center justify-between gap-2 p-2 rounded bg-bg-card border border-cream-05">
                     <span>SSL / TLS 1.3 Handshake</span>
-                    <span className="text-emerald-400 font-bold">18ms</span>
+                    <span className="text-emerald-400 font-bold shrink-0">18ms</span>
                   </div>
                 </div>
               </div>

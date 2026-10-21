@@ -80,18 +80,18 @@ export default function Hero() {
             </motion.div>
 
             <motion.h1
-              className="font-display text-[clamp(2.1rem,4.6vw,3.9rem)] font-black leading-[1.08] tracking-tight mb-5 sm:mb-6"
+              className="font-display text-[clamp(1.9rem,5vw,3.9rem)] font-black leading-[1.08] tracking-tight mb-5 sm:mb-6"
               variants={fadeUp}
               initial="hidden"
               animate="visible"
               custom={1}
             >
               We Build <span className="text-gradient">Digital Experiences</span>
-              <br />That Ignite High Growth
+              <br className="hidden sm:inline" /> That Ignite High Growth
             </motion.h1>
 
             <motion.p
-              className="text-sm sm:text-base md:text-lg text-cream-60 max-w-[580px] leading-relaxed mb-8 sm:mb-10"
+              className="text-sm sm:text-base md:text-lg text-cream-60 max-w-[580px] leading-relaxed mb-7 sm:mb-10"
               variants={fadeUp}
               initial="hidden"
               animate="visible"
@@ -133,7 +133,7 @@ export default function Hero() {
 
             {/* Quick Proof Pills */}
             <motion.div
-              className="flex flex-wrap items-center gap-4 text-xs text-cream-40 font-mono"
+              className="flex flex-wrap items-center gap-2.5 sm:gap-4 text-[0.72rem] sm:text-xs text-cream-40 font-mono"
               variants={fadeUp}
               initial="hidden"
               animate="visible"
@@ -164,7 +164,7 @@ export default function Hero() {
 
         {/* Animated Stats Bar */}
         <motion.div
-          className="grid grid-cols-2 sm:flex sm:items-center justify-center gap-4 sm:gap-8 md:gap-12 px-5 sm:px-12 py-5 sm:py-6 rounded-2xl sm:rounded-3xl bg-bg-card border border-cream-10 shadow-2xl w-full"
+          className="grid grid-cols-2 sm:flex sm:items-center justify-center gap-3 sm:gap-8 md:gap-12 px-3.5 sm:px-12 py-4 sm:py-6 rounded-2xl sm:rounded-3xl bg-bg-card border border-cream-10 shadow-2xl w-full"
           variants={fadeUp}
           initial="hidden"
           animate="visible"

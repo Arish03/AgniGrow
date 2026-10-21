@@ -6,14 +6,14 @@ import Testimonials from "@/components/Testimonials";
 export const metadata: Metadata = {
   title: "Case Studies & Selected Work | Proven Digital Solutions",
   description:
-    "Explore verified case studies: international leather export portals, clinic WhatsApp CRM bots, QR cafe billing suites, and brand identities shipped by AgniGrow in Tamil Nadu.",
+    "Explore verified client case studies: Mayilon Frames (Next.js website & WhatsApp funnel) and Sathish Auto Electrician 2.0 (Google Business Listing & Local SEO) delivered by AgniGrow in Tamil Nadu.",
   alternates: {
     canonical: "https://agnigrow.in/work",
   },
   openGraph: {
     title: "Case Studies & Selected Work | AgniGrow Portfolio",
     description:
-      "Explore verified case studies: international leather export portals, clinic WhatsApp CRM bots, QR cafe billing suites, and brand identities shipped by AgniGrow.",
+      "Explore verified client case studies: Mayilon Frames (Next.js website & WhatsApp funnel) and Sathish Auto Electrician 2.0 (Google Business Listing & Local SEO) delivered by AgniGrow in Tamil Nadu.",
     url: "https://agnigrow.in/work",
     type: "website",
   },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Case Studies & Selected Work | AgniGrow Portfolio",
     description:
-      "High-converting websites, WhatsApp CRM automations, and custom software delivered for real businesses.",
+      "Verified digital deliverables: custom Next.js websites, WhatsApp ordering funnels, and Google Maps local SEO for regional businesses.",
   },
 };
 
@@ -52,7 +52,7 @@ const workSchema = {
       url: "https://agnigrow.in/work",
       name: "AgniGrow Selected Case Studies",
       description:
-        "Featured client case studies across export web portals, WhatsApp CRM automations, brand identities, and custom business software.",
+        "Featured verified client case studies including Mayilon Frames (Next.js website & WhatsApp funnel) and Sathish Auto Electrician 2.0 (Google Business profile & local SEO).",
       isPartOf: {
         "@id": "https://agnigrow.in/#website",
       },
@@ -102,8 +102,8 @@ export default function WorkPage() {
 
       {/* Bottom Conversion Banner */}
       <section className="py-16">
-        <div className="max-w-[1280px] mx-auto px-6 md:px-8">
-          <div className="rounded-3xl bg-bg-card border border-cream-10 p-10 sm:p-16 text-center flex flex-col items-center">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8">
+          <div className="rounded-3xl bg-bg-card border border-cream-10 p-6 sm:p-10 md:p-16 text-center flex flex-col items-center">
             <h2 className="font-display text-2xl sm:text-4xl font-extrabold text-cream mb-4">
               Have a Project You&apos;d Like to Showcase Next?
             </h2>

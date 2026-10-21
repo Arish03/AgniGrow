@@ -24,11 +24,15 @@ export default function AnimatedStat({
 }: AnimatedStatProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
-  const [displayValue, setDisplayValue] = useState(0);
+  const [displayValue, setDisplayValue] = useState(value);
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
-    if (!isInView) return;
+    if (!isInView || hasAnimated) return;
+    setHasAnimated(true);
 
+    // Reset to 0 and animate up
+    setDisplayValue(0);
     let start = 0;
     const startTime = performance.now();
     const durationMs = duration * 1000;
@@ -50,7 +54,7 @@ export default function AnimatedStat({
     };
 
     requestAnimationFrame(updateCounter);
-  }, [isInView, value, duration]);
+  }, [isInView, value, duration, hasAnimated]);
 
   return (
     <div

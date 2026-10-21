@@ -10,73 +10,49 @@ interface Testimonial {
   company: string;
   location: string;
   rating: number;
-  category: "all" | "exports" | "healthcare" | "dining" | "retail";
+  category: "all" | "web" | "seo";
   tag: string;
 }
 
 const CATEGORIES = [
-  { id: "all", label: "All Reviews" },
-  { id: "exports", label: "Leather & Exports" },
-  { id: "healthcare", label: "Healthcare & Clinics" },
-  { id: "dining", label: "Food & Dining" },
-  { id: "retail", label: "Retail & Commerce" },
+  { id: "all", label: "All Client Reviews" },
+  { id: "web", label: "Web & WhatsApp Funnel" },
+  { id: "seo", label: "Google Maps & Local SEO" },
 ] as const;
 
 const TESTIMONIALS: Testimonial[] = [
   {
     quote:
-      "AgniGrow built our international export portal in under 3 weeks. International leather buyers in Germany and the UK can now browse our full catalog and request custom sample specs seamlessly. Our inquiry volume doubled within 60 days.",
-    author: "Zubair Ahmed",
-    role: "Managing Director",
-    company: "EuroStyle Leather Exports",
-    location: "Vaniyambadi",
+      "AgniGrow designed and engineered our official Next.js website and WhatsApp ordering funnel from scratch. Customers across Vaniyambadi can now explore custom, collage, and wall frame designs online and order directly via WhatsApp. The Google Business profile setup earned us 11 verified 5.0★ reviews and consistent store walk-ins.",
+    author: "Mayilon Frames Team",
+    role: "Founder & Proprietor",
+    company: "Mayilon Frames",
+    location: "Cutchery Rd, Vaniyambadi",
     rating: 5,
-    category: "exports",
-    tag: "Export Portal",
+    category: "web",
+    tag: "Next.js Web + WhatsApp",
   },
   {
     quote:
-      "The WhatsApp automated appointment system they configured for our polyclinic reduced our front-desk phone calls by almost 70%. Patients love receiving automatic reminders and directions straight on WhatsApp.",
-    author: "Dr. K. Senthil Nathan",
-    role: "Chief Medical Officer",
-    company: "Care Diagnostics & Polyclinic",
+      "Opening our second workshop at Teacher's Colony, Tirupattur required fast, verified local visibility so motorists could locate our new facility without confusion. AgniGrow handled our Google Business Listing setup, Google Maps pin verification, and local search optimization. Local drivers find us immediately when searching for auto electrician help.",
+    author: "Sathish Kumar",
+    role: "Founder & Proprietor",
+    company: "Sathish Auto Electrician 2.0",
+    location: "Teacher's Colony, Tirupattur",
+    rating: 5,
+    category: "seo",
+    tag: "Google Maps Verification",
+  },
+  {
+    quote:
+      "AgniGrow helped manage our local search authority and customer reviews across Tirupattur. Having built up 49 reviews at 4.3★ and consistent local map rankings, our workshop receives steady calls and drive-in customers every single week for battery diagnostics and automotive electrical repairs.",
+    author: "Sathish Auto Workshop Team",
+    role: "Auto Electrical Lead",
+    company: "Sathish Auto Electrician 1.0",
     location: "Tirupattur",
     rating: 5,
-    category: "healthcare",
-    tag: "WhatsApp CRM",
-  },
-  {
-    quote:
-      "Our restaurant table turnaround is so much faster now with the smart QR menu and billing integration. AgniGrow understands both the modern web look and the practical needs of running a local food business.",
-    author: "Mohammad Irfan",
-    role: "Co-Founder",
-    company: "The Artisan Roast Cafe",
-    location: "Vaniyambadi",
-    rating: 5,
-    category: "dining",
-    tag: "Smart QR Menu",
-  },
-  {
-    quote:
-      "We transitioned from an old offline showroom ledger to a high-speed online wholesale catalog. Wholesale leather shoe buyers from Delhi, Agra, and Dubai place bulk sample requests directly through the site without any manual paperwork.",
-    author: "Tariq Mansoor",
-    role: "Proprietor",
-    company: "Heritage Tanners & Craft",
-    location: "Ambur",
-    rating: 5,
-    category: "exports",
-    tag: "B2B Catalog",
-  },
-  {
-    quote:
-      "Our optical retail boutique needed an upscale luxury presence. AgniGrow created a visual identity and appointment scheduler that elevates our showroom above metro competitors. Sales conversion increased by 40%.",
-    author: "A. Rahman",
-    role: "Lead Optometrist",
-    company: "Elite Vision Studio",
-    location: "Vaniyambadi",
-    rating: 5,
-    category: "retail",
-    tag: "Brand & Booking",
+    category: "seo",
+    tag: "Local SEO & 49 Reviews",
   },
 ];
 
@@ -103,7 +79,7 @@ export default function Testimonials() {
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold/10 border border-gold/20 mb-4 sm:mb-5">
             <span className="text-gold text-xs sm:text-sm">★★★★★</span>
             <span className="font-display text-[0.72rem] sm:text-xs font-semibold tracking-wide text-cream">
-              4.9/5 Average Rating · 35+ Regional Businesses
+              Verified Client Reviews · 5.0★ on Google
             </span>
           </div>
 
@@ -111,10 +87,10 @@ export default function Testimonials() {
             Client Voices
           </p>
           <h2 className="font-display text-[clamp(1.8rem,5vw,3.2rem)] font-extrabold leading-tight mb-3 sm:mb-4">
-            Trusted by Ambitious <span className="text-gradient">Regional Brands</span>
+            Trusted by Ambitious <span className="text-gradient">Regional Businesses</span>
           </h2>
           <p className="text-xs sm:text-sm md:text-base text-cream-60 max-w-[620px] leading-relaxed">
-            See how our bespoke websites, brand systems, and automated WhatsApp workflows drive real bottom-line growth.
+            Real feedback from verified business owners in Vaniyambadi and Tirupattur whose digital presence we built and scaled.
           </p>
 
           {/* Interactive Category Filter Pills */}
@@ -143,7 +119,7 @@ export default function Testimonials() {
           <AnimatePresence mode="popLayout">
             {filteredTestimonials.map((t) => (
               <motion.div
-                key={t.author}
+                key={t.company}
                 layout
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -171,16 +147,16 @@ export default function Testimonials() {
                 </div>
 
                 {/* Author footer */}
-                <div className="pt-3.5 sm:pt-4 border-t border-cream-05 flex items-center justify-between">
+                <div className="pt-3.5 sm:pt-4 border-t border-cream-05 flex flex-wrap items-center justify-between gap-2">
                   <div>
                     <h3 className="font-display font-bold text-xs sm:text-sm text-cream">
                       {t.author}
                     </h3>
-                    <p className="text-[0.7rem] sm:text-xs text-cream-40">
+                    <p className="text-[0.68rem] sm:text-xs text-cream-40">
                       {t.role}, <span className="text-ember font-medium">{t.company}</span>
                     </p>
                   </div>
-                  <span className="text-[0.68rem] sm:text-xs px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-cream-05 text-cream-40 font-mono">
+                  <span className="text-[0.65rem] sm:text-xs px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-cream-05 text-cream-40 font-mono">
                     📍 {t.location}
                   </span>
                 </div>
@@ -190,30 +166,30 @@ export default function Testimonials() {
         </motion.div>
 
         {/* Trust Badges */}
-        <div className="mt-10 sm:mt-16 pt-6 sm:pt-8 border-t border-cream-10 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 text-center">
-          <div>
-            <span className="font-display text-xl sm:text-2xl font-bold text-cream block mb-0.5 sm:mb-1">
-              99.9%
-            </span>
-            <span className="text-[0.7rem] sm:text-xs text-cream-40">Uptime &amp; Hosting SLA</span>
-          </div>
-          <div>
-            <span className="font-display text-xl sm:text-2xl font-bold text-cream block mb-0.5 sm:mb-1">
-              &lt; 1.2s
-            </span>
-            <span className="text-[0.7rem] sm:text-xs text-cream-40">Avg. Page Load Speed</span>
-          </div>
-          <div>
-            <span className="font-display text-xl sm:text-2xl font-bold text-cream block mb-0.5 sm:mb-1">
+        <div className="mt-8 sm:mt-16 pt-6 sm:pt-8 border-t border-cream-10 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 text-center">
+          <div className="p-2 sm:p-0">
+            <span className="font-display text-lg sm:text-2xl font-bold text-cream block mb-0.5 sm:mb-1">
               100%
             </span>
-            <span className="text-[0.7rem] sm:text-xs text-cream-40">Source Code Ownership</span>
+            <span className="text-[0.68rem] sm:text-xs text-cream-40">Verified Real Clients</span>
           </div>
-          <div>
-            <span className="font-display text-xl sm:text-2xl font-bold text-cream block mb-0.5 sm:mb-1">
+          <div className="p-2 sm:p-0">
+            <span className="font-display text-lg sm:text-2xl font-bold text-cream block mb-0.5 sm:mb-1">
+              &lt; 1.2s
+            </span>
+            <span className="text-[0.68rem] sm:text-xs text-cream-40">Avg. Page Load Speed</span>
+          </div>
+          <div className="p-2 sm:p-0">
+            <span className="font-display text-lg sm:text-2xl font-bold text-cream block mb-0.5 sm:mb-1">
+              5.0★
+            </span>
+            <span className="text-[0.68rem] sm:text-xs text-cream-40">Top Google Reviews</span>
+          </div>
+          <div className="p-2 sm:p-0">
+            <span className="font-display text-lg sm:text-2xl font-bold text-cream block mb-0.5 sm:mb-1">
               24/7
             </span>
-            <span className="text-[0.7rem] sm:text-xs text-cream-40">Critical WhatsApp Support</span>
+            <span className="text-[0.68rem] sm:text-xs text-cream-40">Direct WhatsApp Support</span>
           </div>
         </div>
       </div>

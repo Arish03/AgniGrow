@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
-import { Outfit, Inter } from "next/font/google";
+import { Outfit, Inter, Noto_Sans_Tamil } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -16,6 +16,13 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
+});
+
+const notoTamil = Noto_Sans_Tamil({
+  subsets: ["tamil"],
+  variable: "--font-tamil",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const viewport: Viewport = {
@@ -116,15 +123,20 @@ const jsonLd = {
   "@type": "ProfessionalService",
   "@id": "https://agnigrow.in/#organization",
   name: "AgniGrow",
-  alternateName: ["Agni Grow", "Agni Digital"],
+  alternateName: ["Agni Grow", "AgniGrow Digital Agency", "Agni Digital"],
   image: "https://agnigrow.in/opengraph-image",
   logo: "https://agnigrow.in/icon.svg",
   url: "https://agnigrow.in",
-  telephone: "+91-7200146914",
+  description:
+    "AgniGrow is a premier full-stack digital agency specializing in Next.js web development, official WhatsApp CRM automation, brand identity, and bespoke POS systems for regional businesses and export manufacturers in Tamil Nadu.",
+  telephone: "+91-72001-46914",
   email: "info@agnigrow.in",
+  priceRange: "₹₹",
+  currenciesAccepted: "INR, USD, EUR",
+  paymentAccepted: "Cash, Credit Card, Bank Transfer, UPI",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Vaniyambadi Main Road",
+    streetAddress: "AgniGrow Studio, Main Town",
     addressLocality: "Vaniyambadi",
     addressRegion: "Tamil Nadu",
     postalCode: "635751",
@@ -135,6 +147,21 @@ const jsonLd = {
     latitude: 12.6825,
     longitude: 78.6186,
   },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ],
+      opens: "09:30",
+      closes: "19:00",
+    },
+  ],
   areaServed: [
     { "@type": "City", name: "Vaniyambadi" },
     { "@type": "City", name: "Ambur" },
@@ -142,7 +169,7 @@ const jsonLd = {
     { "@type": "City", name: "Vellore" },
     { "@type": "City", name: "Ranipet" },
     { "@type": "City", name: "Chennai" },
-    { "@type": "State", name: "Tamil Nadu" },
+    { "@type": "AdministrativeArea", name: "Tamil Nadu" },
     { "@type": "Country", name: "India" },
   ],
   hasOfferCatalog: {
@@ -153,59 +180,46 @@ const jsonLd = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "High-Speed Next.js Website Development",
-          description: "Mobile-first, multilingual, export-ready web portals with sub-second loading speed.",
+          name: "Next.js Web Development",
+          description:
+            "High-performance, Core Web Vitals optimized web applications and portals.",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "WhatsApp CRM & Business Automation",
-          description: "Official WhatsApp Cloud API chatbots, lead funnels, and automated appointment workflows.",
+          name: "Official WhatsApp CRM Automation",
+          description:
+            "Official Meta Cloud API lead funnels, 24/7 chatbots, and automated customer notifications.",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Brand Identity & Design Systems",
-          description: "Modern vector logos, luxury product packaging, typography kits, and corporate guidelines.",
+          name: "Custom Software & Thermal POS Systems",
+          description:
+            "Cloud billing, GST-compliant invoicing, and thermal receipt printing solutions.",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Custom Cloud POS & ERP Software",
-          description: "Thermal billing systems, warehouse inventory control, and multi-depot sales dashboards.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "E-Commerce Stores & B2B Catalogs",
-          description: "Frictionless storefronts with UPI/Razorpay payments and direct WhatsApp order notifications.",
+          name: "Brand Identity Design",
+          description:
+            "Vector logos, luxury export packaging, and digital style guides.",
         },
       },
     ],
   },
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      opens: "09:30",
-      closes: "19:00",
-    },
-  ],
   sameAs: [
-    "https://instagram.com/agnigrow.in",
-    "https://linkedin.com/company/agnigrow",
+    "https://www.linkedin.com/company/agnigrow",
+    "https://www.instagram.com/agnigrow",
+    "https://twitter.com/agnigrow",
+    "https://github.com/agnigrow",
   ],
-  priceRange: "₹₹",
-  currenciesAccepted: "INR, USD, EUR",
-  paymentAccepted: "Cash, Credit Card, Bank Transfer, UPI",
   serviceArea: {
     "@type": "AdministrativeArea",
     name: "Tamil Nadu, India & International Exporters",
@@ -222,7 +236,7 @@ export default function RootLayout({
       lang="en"
       data-scroll-behavior="smooth"
       suppressHydrationWarning
-      className={`${outfit.variable} ${inter.variable}`}
+      className={`${outfit.variable} ${inter.variable} ${notoTamil.variable}`}
     >
       <head>
         <Script

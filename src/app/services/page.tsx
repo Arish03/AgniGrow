@@ -335,27 +335,27 @@ export default function ServicesPage() {
       <Addons />
 
       {/* Bottom Conversion Banner */}
-      <section className="py-16">
-        <div className="max-w-[1280px] mx-auto px-6 md:px-8">
-          <div className="rounded-3xl bg-gradient-to-r from-[#ff5a1f]/20 via-[#1c1614] to-[#ffb020]/20 border border-ember/30 p-10 sm:p-16 text-center flex flex-col items-center">
-            <h2 className="font-display text-2xl sm:text-4xl font-extrabold text-cream mb-4">
+      <section className="py-12 sm:py-16">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8">
+          <div className="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-[#ff5a1f]/20 via-[#1c1614] to-[#ffb020]/20 border border-ember/30 p-6 sm:p-10 md:p-16 text-center flex flex-col items-center">
+            <h2 className="font-display text-xl sm:text-3xl md:text-4xl font-extrabold text-cream mb-3 sm:mb-4">
               Need a Custom Solution for Your Business?
             </h2>
-            <p className="text-sm sm:text-base text-cream-60 max-w-[560px] leading-relaxed mb-8">
+            <p className="text-xs sm:text-sm md:text-base text-cream-60 max-w-[560px] leading-relaxed mb-6 sm:mb-8">
               We specialize in tailoring digital architectures to your precise operational bottlenecks. Contact us today for a free discovery session.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center w-full sm:w-auto">
               <Link
                 href="/contact"
-                className="px-8 py-3.5 rounded-full font-display font-bold text-sm gradient-ember text-bg shadow-ember hover:shadow-ember-hover transition-all"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-full font-display font-bold text-xs sm:text-sm gradient-ember text-bg shadow-ember hover:shadow-ember-hover transition-all text-center"
               >
-                Start a Conversation
+                Start a Conversation →
               </Link>
               <a
                 href="https://wa.me/917200146914"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-3.5 rounded-full font-display font-bold text-sm border border-emerald-500/40 text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 transition-all flex items-center gap-2"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-full font-display font-bold text-xs sm:text-sm border border-emerald-500/40 text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 transition-all flex items-center justify-center gap-2 text-center"
               >
                 <span>💬</span> WhatsApp Direct
               </a>
