@@ -6,14 +6,14 @@
 
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
-    va?: (action: string, data: Record<string, any>) => void;
+    gtag?: (...args: unknown[]) => void;
+    va?: (action: string, data: Record<string, unknown>) => void;
   }
 }
 
 export function trackEvent(
   eventName: string,
-  parameters: Record<string, any> = {}
+  parameters: Record<string, unknown> = {}
 ) {
   if (typeof window === "undefined") return;
 

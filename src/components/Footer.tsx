@@ -48,7 +48,7 @@ export default function Footer() {
           </p>
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 pt-2">
             <a
-              href="https://wa.me/917200146914"
+              href="https://wa.me/917200146914?text=Hi%20AgniGrow%20team,%20I'd%20like%20to%20discuss%20a%20project%20for%20my%20business."
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs px-3 py-1.5 rounded-lg border border-emerald-500/30 text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 transition-colors"

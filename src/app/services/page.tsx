@@ -274,7 +274,7 @@ export default function ServicesPage() {
                       </span>
                       <div>
                         <span className="text-[0.7rem] sm:text-xs font-mono uppercase tracking-widest text-ember font-semibold">
-                          0{idx + 1} // Capability
+                          {`0${idx + 1} // Capability`}
                         </span>
                         <h2 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-cream">
                           {s.title}

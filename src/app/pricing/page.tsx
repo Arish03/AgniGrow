@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PricingSection from "@/components/PricingSection";
 
 export const metadata: Metadata = {
-  title: "Simple & Transparent Pricing | AgniGrow",
+  title: "Simple & Transparent Pricing",
   description:
     "Explore simple, transparent pricing for high-speed Next.js websites, WhatsApp CRM automation, and custom software. One flat investment with zero recurring platform rent.",
   alternates: {

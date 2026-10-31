@@ -7,19 +7,21 @@ import HeroAnimation from "./HeroAnimation";
 
 function AnimatedStat({ value, suffix = "", label }: { value: number | string; suffix?: string; label: string }) {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true });
-  const [count, setCount] = useState(0);
+  const isInView = useInView(ref, { once: true, margin: "80px" });
+  const [count, setCount] = useState<number>(typeof value === "number" ? value : 0);
+  const hasAnimated = useRef(false);
 
   useEffect(() => {
-    if (!isInView) return;
-    if (typeof value !== "number") return;
+    if (!isInView || hasAnimated.current || typeof value !== "number") return;
+    hasAnimated.current = true;
 
     let start = 0;
-    const duration = 1600; // ms
-    const steps = 40;
+    const duration = 1400; // ms
+    const steps = 30;
     const stepTime = duration / steps;
     const increment = value / steps;
 
+    setCount(0);
     const timer = setInterval(() => {
       start += increment;
       if (start >= value) {
@@ -39,7 +41,7 @@ function AnimatedStat({ value, suffix = "", label }: { value: number | string; s
         {typeof value === "number" ? count : value}
         {suffix}
       </span>
-      <span className="text-xs text-cream-40 uppercase tracking-widest font-medium">
+      <span className="text-xs text-cream-40 uppercase tracking-widest font-medium text-center">
         {label}
       </span>
     </div>

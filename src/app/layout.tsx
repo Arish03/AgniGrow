@@ -136,7 +136,7 @@ const jsonLd = {
   paymentAccepted: "Cash, Credit Card, Bank Transfer, UPI",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "AgniGrow Studio, Main Town",
+    streetAddress: "Main Road, Vaniyambadi",
     addressLocality: "Vaniyambadi",
     addressRegion: "Tamil Nadu",
     postalCode: "635751",
@@ -266,7 +266,9 @@ export default function RootLayout({
         <Footer />
         <WhatsAppButton />
         {/* Vercel Web Analytics */}
-        <Script src="/_vercel/insights/script.js" strategy="afterInteractive" />
+        {process.env.NODE_ENV === "production" && (
+          <Script src="/_vercel/insights/script.js" strategy="afterInteractive" />
+        )}
       </body>
     </html>
   );

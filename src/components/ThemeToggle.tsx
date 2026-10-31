@@ -1,28 +1,40 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { motion } from "framer-motion";
 
-export default function ThemeToggle() {
-  const [theme, setTheme] = useState<"dark" | "light">("dark");
-  const [mounted, setMounted] = useState(false);
+const subscribeTheme = (callback: () => void) => {
+  if (typeof window === "undefined") return () => {};
+  const observer = new MutationObserver(callback);
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["class"],
+  });
+  return () => observer.disconnect();
+};
 
-  useEffect(() => {
-    setMounted(true);
-    const isLight = document.documentElement.classList.contains("light");
-    setTheme(isLight ? "light" : "dark");
-  }, []);
+export default function ThemeToggle() {
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
+
+  const isLight = useSyncExternalStore(
+    subscribeTheme,
+    () => (typeof document !== "undefined" ? document.documentElement.classList.contains("light") : false),
+    () => false
+  );
+
+  const theme: "dark" | "light" = isLight ? "light" : "dark";
 
   const toggleTheme = () => {
-    const newTheme = theme === "dark" ? "light" : "dark";
-    setTheme(newTheme);
-
-    if (newTheme === "light") {
-      document.documentElement.classList.add("light");
-      localStorage.setItem("agni-theme", "light");
-    } else {
+    if (isLight) {
       document.documentElement.classList.remove("light");
       localStorage.setItem("agni-theme", "dark");
+    } else {
+      document.documentElement.classList.add("light");
+      localStorage.setItem("agni-theme", "light");
     }
   };
 

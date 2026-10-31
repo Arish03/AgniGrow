@@ -59,11 +59,11 @@ const contactSchema = {
         "@type": "ProfessionalService",
         "@id": "https://agnigrow.in/#organization",
         name: "AgniGrow",
-        telephone: "+91-7200146914",
+        telephone: "+91-72001-46914",
         email: "info@agnigrow.in",
         address: {
           "@type": "PostalAddress",
-          streetAddress: "Vaniyambadi Main Road",
+          streetAddress: "Main Road, Vaniyambadi",
           addressLocality: "Vaniyambadi",
           addressRegion: "Tamil Nadu",
           postalCode: "635751",

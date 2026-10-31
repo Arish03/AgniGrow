@@ -34,10 +34,11 @@ export default function Navbar() {
     };
   }, [mobileOpen]);
 
-  // Close mobile drawer on route change
-  useEffect(() => {
+  const [prevPath, setPrevPath] = useState(pathname);
+  if (pathname !== prevPath) {
+    setPrevPath(pathname);
     setMobileOpen(false);
-  }, [pathname]);
+  }
 
   return (
     <header
@@ -100,6 +101,8 @@ export default function Navbar() {
             className="flex md:hidden flex-col justify-center items-center gap-[5px] w-9 h-9 p-1 z-20 outline-none cursor-pointer rounded-lg hover:bg-cream-05 transition-colors shrink-0"
             onClick={() => setMobileOpen((v) => !v)}
             aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-drawer"
             id="menu-toggle"
           >
             <span

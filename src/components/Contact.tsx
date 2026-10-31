@@ -46,7 +46,8 @@ export default function Contact() {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+    const fieldId = e.target.id === "contact-info" ? "contact" : e.target.id;
+    setFormData((prev) => ({ ...prev, [fieldId]: e.target.value }));
     if (errorMessage) setErrorMessage("");
   };
 
@@ -82,24 +83,41 @@ export default function Contact() {
     setStatus("success");
   };
 
-  const handleDirectSubmit = (e: React.FormEvent) => {
+  const handleDirectSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name.trim() || !formData.contact.trim()) {
       setErrorMessage("Please enter your name and phone/email to proceed.");
       return;
     }
 
-    // Track conversion event
-    trackLeadSubmission({
-      service: formData.service,
-      budget: formData.budget,
-      timeline: formData.timeline,
-    });
-
     setStatus("submitting");
-    setTimeout(() => {
+    setErrorMessage("");
+
+    try {
+      trackLeadSubmission({
+        service: formData.service,
+        budget: formData.budget,
+        timeline: formData.timeline,
+      });
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit inquiry");
+      }
+
       setStatus("success");
-    }, 800);
+    } catch (err) {
+      console.error(err);
+      setErrorMessage(
+        "Could not submit inquiry right now. Please message our leads desk directly on WhatsApp."
+      );
+      setStatus("idle");
+    }
   };
 
   return (
@@ -187,7 +205,7 @@ export default function Contact() {
               </a>
 
               <a
-                href="https://wa.me/917200146914"
+                href="https://wa.me/917200146914?text=Hi%20AgniGrow%20team,%20I'd%20like%20to%20consult%20with%20your%20leads%20desk."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-start gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl bg-cream-05 border border-cream-10 hover:border-emerald-500/30 transition-colors group"
@@ -237,7 +255,9 @@ export default function Contact() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3 mt-4 w-full sm:w-auto justify-center">
                     <a
-                      href="https://wa.me/917200146914"
+                      href={`https://wa.me/917200146914?text=${encodeURIComponent(
+                        `Hi AgniGrow team, I just submitted an inquiry for ${formData.service} (Name: ${formData.name}).`
+                      )}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-5 py-2.5 rounded-full text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white transition-all flex items-center justify-center gap-1.5"
@@ -375,16 +395,16 @@ export default function Contact() {
                       />
                     </div>
                     <div className="flex flex-col gap-1.5">
-                      <label htmlFor="contact" className="text-[0.72rem] sm:text-xs font-semibold uppercase tracking-wider text-cream-40">
+                      <label htmlFor="contact-info" className="text-[0.72rem] sm:text-xs font-semibold uppercase tracking-wider text-cream-40">
                         Email or WhatsApp Phone *
                       </label>
                       <input
                         type="text"
-                        id="contact"
+                        id="contact-info"
                         value={formData.contact}
                         onChange={handleChange}
                         required
-                        placeholder="+91 72001 46914"
+                        placeholder="+91 72001 46914 or your@email.com"
                         className="w-full px-3.5 py-2.5 sm:py-3 bg-cream-05 border border-cream-10 rounded-xl text-cream text-xs sm:text-sm placeholder:text-cream-20 outline-none transition-all focus:border-ember focus:shadow-[0_0_0_3px_rgba(255,90,31,0.15)]"
                       />
                     </div>
