@@ -129,14 +129,14 @@ export default function InteractiveGrowthEngine() {
             <span className="text-gradient">Measurable Scale</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-cream-60 max-w-[620px] leading-relaxed">
-            Move your cursor across the digital field to interact with live particles. Click any module below to test our real-time speed, WhatsApp automation, and export architecture.
+            Move your cursor across the digital field to interact with live particles. Click any module below to test our real-time speed, AI automation, and export architecture.
           </p>
 
           {/* Module Selector Tabs */}
           <div className="grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-1.5 sm:gap-2 mt-6 sm:mt-8 p-1.5 rounded-2xl bg-bg-card border border-cream-10 w-full sm:w-auto">
             {[
               { id: "speed", label: "⚡ Sub-Second Speed", pill: "Next.js 16" },
-              { id: "whatsapp", label: "💬 WhatsApp CRM", pill: "Auto Triage" },
+              { id: "whatsapp", label: "🤖 AI Automation", pill: "Smart Triage" },
               { id: "export", label: "🌐 Export Showroom", pill: "Multi-Currency" },
               { id: "cloud", label: "☁️ Cloud Infrastructure", pill: "99.99% Uptime" },
             ].map((tab) => {
@@ -245,18 +245,18 @@ export default function InteractiveGrowthEngine() {
             </div>
           )}
 
-          {/* Module 2: WhatsApp CRM Simulation */}
+          {/* Module 2: AI & WhatsApp Automation Simulation */}
           {activeTab === "whatsapp" && (
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-6 flex flex-col gap-4">
                 <span className="font-mono text-xs text-emerald-400 uppercase tracking-wider font-semibold">
-                  Module 02 · WhatsApp Business API Automation
+                  Module 02 · AI & WhatsApp Automation
                 </span>
                 <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-cream">
-                  Turn Passive Web Visitors into Instant WhatsApp Conversations
+                  Turn Inbound Visitors into Instant AI-Qualified Leads
                 </h3>
                 <p className="text-xs sm:text-sm text-cream-60 leading-relaxed">
-                  In India and regional markets, clients don&apos;t fill out slow web forms — they want instant answers on WhatsApp. Our bots triage inquiries, schedule appointments, and alert staff phones within seconds.
+                  Our intelligent AI agents triage customer inquiries, answer product questions with domain-specific accuracy, schedule consultations, and sync qualified leads directly to WhatsApp in seconds.
                 </p>
 
                 <div className="flex flex-wrap gap-2 pt-2">

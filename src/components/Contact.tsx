@@ -7,7 +7,7 @@ import { trackLeadSubmission, trackWhatsAppClick } from "@/lib/analytics";
 const SERVICE_OPTIONS = [
   "Website & Portal",
   "E-Commerce Store",
-  "WhatsApp CRM & Bot",
+  "AI Automation",
   "Brand Identity Kit",
   "Cloud POS / ERP",
   "Digital Event Micro-Site",

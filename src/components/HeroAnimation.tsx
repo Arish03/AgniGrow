@@ -14,9 +14,9 @@ const SERVICES = [
     iconBg: "bg-ember/20",
   },
   {
-    icon: "💬",
-    title: "WhatsApp CRM",
-    subtitle: "Official API · 24/7 Bots",
+    icon: "🤖",
+    title: "AI Automation",
+    subtitle: "Smart Agents · 24/7 Workflows",
     color: "emerald",
     borderColor: "border-emerald-500/30",
     bgColor: "bg-emerald-500/10",

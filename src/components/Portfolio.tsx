@@ -215,7 +215,7 @@ export default function Portfolio() {
                         Visit Live Website ({new URL(cs.liveUrl).hostname}) ↗
                       </a>
                     ) : (
-                      <div className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-full font-display font-semibold text-xs sm:text-sm border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-center">
+                      <div className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-full font-display font-semibold text-xs sm:text-sm border btn-whatsapp-outline text-center">
                         <span>✓</span> Google Maps &amp; Local Business Verified
                       </div>
                     )}

@@ -4,16 +4,16 @@ import Addons from "@/components/Addons";
 import Process from "@/components/Process";
 
 export const metadata: Metadata = {
-  title: "Services & Capabilities | Web, Branding & WhatsApp CRM",
+  title: "Services & Capabilities | Web, Branding & AI Automation",
   description:
-    "Explore full-stack digital capabilities: high-converting Next.js websites, official WhatsApp Business CRM bots, luxury brand visual identities, and custom cloud POS software in Vaniyambadi & Tamil Nadu.",
+    "Explore full-stack digital capabilities: high-converting Next.js websites, intelligent AI automation, luxury brand visual identities, and custom cloud POS software in Vaniyambadi & Tamil Nadu.",
   alternates: {
     canonical: "https://agnigrow.in/services",
   },
   openGraph: {
     title: "Services & Capabilities | AgniGrow Digital Solutions",
     description:
-      "Explore full-stack digital capabilities: high-converting Next.js websites, official WhatsApp Business CRM bots, luxury brand visual identities, and custom cloud software.",
+      "Explore full-stack digital capabilities: high-converting Next.js websites, intelligent AI automation, luxury brand visual identities, and custom cloud software.",
     url: "https://agnigrow.in/services",
     type: "website",
   },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Services & Capabilities | AgniGrow Digital Solutions",
     description:
-      "Next.js websites, WhatsApp CRM automation, brand identities, and cloud POS billing systems tailored to accelerate business growth.",
+      "Next.js websites, AI automation, brand identities, and cloud POS billing systems tailored to accelerate business growth.",
   },
 };
 
@@ -69,8 +69,8 @@ const servicesSchema = {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "WhatsApp Automation & CRM",
-              description: "Automated customer flows, lead management, and instant notifications via official WhatsApp Business API.",
+              name: "AI Automation & Workflows",
+              description: "Custom AI agents, automated customer triage, lead qualification, and multi-channel WhatsApp workflows.",
             },
           },
           {
@@ -138,19 +138,20 @@ const DETAILED_SERVICES = [
   },
   {
     id: "automation",
-    icon: "⚡",
-    title: "WhatsApp Automation & CRM",
-    tagline: "Automated customer flows, lead management, and instant notifications that save 20+ hours a week.",
+    icon: "🤖",
+    title: "AI Automation & Workflows",
+    tagline: "Intelligent AI agents, automated customer triage, and smart workflows that save 20+ hours a week.",
     description:
-      "In India and Tamil Nadu, WhatsApp is the #1 communication tool. We build intelligent WhatsApp Business API workflows that automatically answer customer inquiries, capture lead data into a unified dashboard, send appointment reminders, and deliver PDF quotation estimates in seconds.",
+      "Modern businesses scale with smart automation. We architect custom AI agents and workflow automation that qualify inbound leads 24/7, answer customer inquiries with domain-specific knowledge, sync conversations to your CRM, and trigger instant WhatsApp and email notifications in seconds.",
     deliverables: [
-      "Official WhatsApp Business Cloud API setup",
-      "Intelligent keyword & interactive button chatbots",
-      "Automated appointment & consultation booking",
-      "Customer review & Google Maps feedback collection",
-      "Centralized lead tracking CRM dashboard",
+      "Custom AI customer service agents & chatbots",
+      "Official WhatsApp Business Cloud API & AI routing",
+      "Automated lead qualification & CRM pipeline sync",
+      "Smart appointment scheduling & consultation booking",
+      "Automated document processing & quotation generation",
+      "Google Maps review & post-service feedback collection",
     ],
-    idealFor: "Clinics, diagnostic centers, retail showrooms, service agencies & event planners.",
+    idealFor: "Clinics, diagnostic centers, retail showrooms, B2B exporters & service agencies.",
   },
   {
     id: "ecommerce",
@@ -236,7 +237,7 @@ export default function ServicesPage() {
             End-to-End <span className="text-gradient">Digital Solutions</span>
           </h1>
           <p className="text-base sm:text-lg text-cream-60 max-w-[680px] mx-auto leading-relaxed mb-10">
-            From your primary brand identity and high-performance website to custom ERP software and WhatsApp automation — we engineer systems that drive measurable commercial growth.
+            From your primary brand identity and high-performance website to custom ERP software and AI automation — we engineer systems that drive measurable commercial growth.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
             <Link
@@ -337,7 +338,7 @@ export default function ServicesPage() {
       {/* Bottom Conversion Banner */}
       <section className="py-12 sm:py-16">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8">
-          <div className="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-[#ff5a1f]/20 via-[#1c1614] to-[#ffb020]/20 border border-ember/30 p-6 sm:p-10 md:p-16 text-center flex flex-col items-center">
+          <div className="rounded-2xl sm:rounded-3xl bg-gradient-to-r from-ember/15 via-bg-card to-gold/15 border border-ember/30 p-6 sm:p-10 md:p-16 text-center flex flex-col items-center shadow-xl">
             <h2 className="font-display text-xl sm:text-3xl md:text-4xl font-extrabold text-cream mb-3 sm:mb-4">
               Need a Custom Solution for Your Business?
             </h2>
@@ -355,7 +356,7 @@ export default function ServicesPage() {
                 href="https://wa.me/917200146914"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-full font-display font-bold text-xs sm:text-sm border border-emerald-500/40 text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 transition-all flex items-center justify-center gap-2 text-center"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-full font-display font-bold text-xs sm:text-sm border btn-whatsapp-outline transition-all flex items-center justify-center gap-2 text-center"
               >
                 <span>💬</span> WhatsApp Direct
               </a>

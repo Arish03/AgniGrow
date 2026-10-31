@@ -4,14 +4,14 @@ import PricingSection from "@/components/PricingSection";
 export const metadata: Metadata = {
   title: "Simple & Transparent Pricing",
   description:
-    "Explore simple, transparent pricing for high-speed Next.js websites, WhatsApp CRM automation, and custom software. One flat investment with zero recurring platform rent.",
+    "Explore simple, transparent pricing for high-speed Next.js websites, AI automation, and custom software. One flat investment with zero recurring platform rent.",
   alternates: {
     canonical: "https://agnigrow.in/pricing",
   },
   openGraph: {
     title: "Simple & Transparent Pricing | AgniGrow",
     description:
-      "Clear, milestone-based investment for your business. High-speed websites, WhatsApp automation, and custom software.",
+      "Clear, milestone-based investment for your business. High-speed websites, AI automation, and custom software.",
     url: "https://agnigrow.in/pricing",
     type: "website",
   },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Simple & Transparent Pricing | AgniGrow",
     description:
-      "Clear milestone pricing for high-speed websites, WhatsApp CRM automation, and custom software.",
+      "Clear milestone pricing for high-speed websites, AI automation, and custom software.",
   },
 };
 
@@ -50,7 +50,7 @@ const pricingSchema = {
       url: "https://agnigrow.in/pricing",
       name: "AgniGrow Pricing & Packages",
       description:
-        "Transparent investment plans for high-speed Next.js websites, WhatsApp CRM automation, and custom business software.",
+        "Transparent investment plans for high-speed Next.js websites, AI automation, and custom business software.",
       isPartOf: {
         "@id": "https://agnigrow.in/#website",
       },

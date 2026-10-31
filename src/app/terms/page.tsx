@@ -42,7 +42,7 @@ export default function TermsPage() {
           <div>
             <h2>2. Services</h2>
             <p>
-              AgniGrow provides digital agency services including but not limited to: website design and development, brand identity design, WhatsApp CRM automation, custom software development, and cloud POS systems. The specific scope, deliverables, and timeline for each project will be outlined in a written project proposal or agreement.
+              AgniGrow provides digital agency services including but not limited to: website design and development, brand identity design, AI automation, custom software development, and cloud POS systems. The specific scope, deliverables, and timeline for each project will be outlined in a written project proposal or agreement.
             </p>
           </div>
 

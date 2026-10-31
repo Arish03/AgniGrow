@@ -24,8 +24,8 @@ const TESTIMONIALS: Testimonial[] = [
   {
     quote:
       "AgniGrow designed and engineered our official Next.js website and WhatsApp ordering funnel from scratch. Customers across Vaniyambadi can now explore custom, collage, and wall frame designs online and order directly via WhatsApp. The Google Business profile setup earned us 11 verified 5.0★ reviews and consistent store walk-ins.",
-    author: "Mayilon Frames Team",
-    role: "Founder & Proprietor",
+    author: "Mayilon Frames",
+    role: "Founder",
     company: "Mayilon Frames",
     location: "Cutchery Rd, Vaniyambadi",
     rating: 5,
@@ -35,8 +35,8 @@ const TESTIMONIALS: Testimonial[] = [
   {
     quote:
       "Opening our second workshop at Teacher's Colony, Tirupattur required fast, verified local visibility so motorists could locate our new facility without confusion. AgniGrow handled our Google Business Listing setup, Google Maps pin verification, and local search optimization. Local drivers find us immediately when searching for auto electrician help.",
-    author: "Sathish Kumar",
-    role: "Founder & Proprietor",
+    author: "Suriya (Nethaji)",
+    role: "Founder",
     company: "Sathish Auto Electrician 2.0",
     location: "Teacher's Colony, Tirupattur",
     rating: 5,
@@ -46,7 +46,7 @@ const TESTIMONIALS: Testimonial[] = [
   {
     quote:
       "AgniGrow helped manage our local search authority and customer reviews across Tirupattur. Having built up 49 reviews at 4.3★ and consistent local map rankings, our workshop receives steady calls and drive-in customers every single week for battery diagnostics and automotive electrical repairs.",
-    author: "Sathish Auto Workshop Team",
+    author: "Suriya (Nethaji)",
     role: "Auto Electrical Lead",
     company: "Sathish Auto Electrician 1.0",
     location: "Tirupattur",
@@ -101,11 +101,10 @@ export default function Testimonials() {
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`px-3.5 py-1.5 rounded-full text-xs font-display font-medium transition-all duration-200 cursor-pointer ${
-                    isActive
+                  className={`px-3.5 py-1.5 rounded-full text-xs font-display font-medium transition-all duration-200 cursor-pointer ${isActive
                       ? "bg-ember text-bg font-bold shadow-md shadow-ember/25"
                       : "bg-cream-05 text-cream-60 hover:text-cream border border-cream-10 hover:border-cream-20"
-                  }`}
+                    }`}
                 >
                   {cat.label}
                 </button>

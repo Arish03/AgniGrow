@@ -99,7 +99,7 @@ export default function Hero() {
               animate="visible"
               custom={2}
             >
-              Your trusted partner for export-ready Next.js websites, official WhatsApp CRM automation, bespoke software, and luxury branding — engineered for ambitious regional businesses scaling to Tamil Nadu and global markets.
+              Your trusted partner for export-ready Next.js websites, intelligent AI automation, bespoke software, and luxury branding — engineered for ambitious regional businesses scaling to Tamil Nadu and global markets.
             </motion.p>
 
             {/* CTA Button Group */}

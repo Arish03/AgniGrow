@@ -11,10 +11,10 @@ const FEATURED_SERVICES = [
     highlight: "Next.js • High Core Web Vitals • Global SEO",
   },
   {
-    icon: "⚡",
-    title: "WhatsApp CRM & Bots",
-    tagline: "Automated inquiry handling, catalogs & order alerts.",
-    highlight: "Cloud API • 24/7 Auto Responses • Lead Funnel",
+    icon: "🤖",
+    title: "AI Automation",
+    tagline: "Intelligent AI agents, automated triage & smart workflows.",
+    highlight: "AI Chatbots • Smart Triage • CRM Pipeline Sync",
   },
   {
     icon: "🎨",
@@ -49,7 +49,7 @@ export default function HomeServicesPreview() {
             Full-Stack <span className="text-gradient">Digital Services</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-cream-60 max-w-[600px] leading-relaxed px-2">
-            From modern web portals to WhatsApp automation and custom business software — engineered to scale your operations.
+            From modern web portals to AI automation and custom business software — engineered to scale your operations.
           </p>
         </motion.div>
 

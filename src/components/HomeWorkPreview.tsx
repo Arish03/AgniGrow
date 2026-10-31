@@ -57,7 +57,7 @@ export default function HomeWorkPreview() {
             href="https://wa.me/917200146914?text=Hi%20AgniGrow,%20I'd%20like%20to%20view%20live%20client%20case%20study%20demos"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 rounded-full font-display font-semibold text-xs sm:text-sm border border-emerald-500/30 text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 transition-all text-center"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3.5 rounded-full font-display font-semibold text-xs sm:text-sm border btn-whatsapp-outline transition-all text-center"
           >
             <span>💬</span> Request Private Case Study Walkthrough
           </a>

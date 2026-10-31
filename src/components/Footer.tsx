@@ -19,7 +19,7 @@ const footerLinks = {
   services: [
     { label: "Website Development", href: "/services#web-development" },
     { label: "E-Commerce Stores", href: "/services#ecommerce" },
-    { label: "WhatsApp CRM & Bots", href: "/services#automation" },
+    { label: "AI Automation", href: "/services#automation" },
     { label: "Brand Identity Kits", href: "/services#branding" },
     { label: "Custom ERP & Cloud POS", href: "/services#software" },
     { label: "Digital Event Micro-Sites", href: "/services#invitations" },
@@ -44,14 +44,14 @@ export default function Footer() {
             <AgniLogo width={160} />
           </Link>
           <p className="text-sm text-cream-60 max-w-[280px] leading-relaxed">
-            Your Digital Growth Partner. High-converting websites, WhatsApp CRM automation, and bespoke software engineered for ambitious businesses.
+            Your Digital Growth Partner. High-converting websites, AI automation, and bespoke software engineered for ambitious businesses.
           </p>
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 pt-2">
             <a
               href="https://wa.me/917200146914?text=Hi%20AgniGrow%20team,%20I'd%20like%20to%20discuss%20a%20project%20for%20my%20business."
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs px-3 py-1.5 rounded-lg border border-emerald-500/30 text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 transition-colors"
+              className="text-xs px-3 py-1.5 rounded-lg border btn-whatsapp-outline transition-colors"
             >
               💬 +91 72001 46914
             </a>

@@ -9,14 +9,14 @@ import HomeContactCTA from "@/components/HomeContactCTA";
 export const metadata: Metadata = {
   title: "AgniGrow | Your Digital Growth Partner",
   description:
-    "Your Digital Growth Partner. AgniGrow builds lightning-fast Next.js websites, luxury brand identities, WhatsApp CRM bots, and custom software systems tailored for businesses in Vaniyambadi, Ambur, and export markets.",
+    "Your Digital Growth Partner. AgniGrow builds lightning-fast Next.js websites, luxury brand identities, AI automation, and custom software systems tailored for businesses in Vaniyambadi, Ambur, and export markets.",
   alternates: {
     canonical: "https://agnigrow.in",
   },
   openGraph: {
     title: "AgniGrow | Your Digital Growth Partner",
     description:
-      "Your Digital Growth Partner. Transform your business with cutting-edge digital experiences, high-converting Next.js websites, and automated WhatsApp growth systems.",
+      "Your Digital Growth Partner. Transform your business with cutting-edge digital experiences, high-converting Next.js websites, and AI automation workflows.",
     url: "https://agnigrow.in",
     type: "website",
   },
@@ -29,7 +29,7 @@ const homeSchema = {
   url: "https://agnigrow.in",
   name: "AgniGrow",
   description:
-    "High-converting Next.js websites, bespoke brand identity, official WhatsApp Business automation, and custom software in Vaniyambadi, Tamil Nadu.",
+    "High-converting Next.js websites, bespoke brand identity, intelligent AI automation, and custom software in Vaniyambadi, Tamil Nadu.",
   publisher: {
     "@id": "https://agnigrow.in/#organization",
   },

@@ -13,7 +13,7 @@ export default function HomeContactCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="rounded-2xl sm:rounded-3xl bg-gradient-to-br from-bg-card via-bg-card-hover to-[#1f1714] border border-ember/30 p-6 sm:p-10 md:p-16 text-center flex flex-col items-center shadow-2xl relative overflow-hidden"
+          className="rounded-2xl sm:rounded-3xl bg-gradient-to-br from-bg-card via-bg-card to-bg-card-hover border border-ember/30 p-6 sm:p-10 md:p-16 text-center flex flex-col items-center shadow-2xl relative overflow-hidden"
         >
           {/* Flame pill badge */}
           <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-ember/10 border border-ember/25 mb-5 sm:mb-6">
@@ -28,7 +28,7 @@ export default function HomeContactCTA() {
           </h2>
 
           <p className="text-sm sm:text-base md:text-lg text-cream-60 max-w-[620px] leading-relaxed mb-8 sm:mb-10 px-2">
-            Whether you need a high-converting website, automated WhatsApp lead workflows, or custom cloud software — our team in Vaniyambadi is ready to help you succeed.
+            Whether you need a high-converting website, intelligent AI automation workflows, or custom cloud software — our team in Vaniyambadi is ready to help you succeed.
           </p>
 
           {/* Action Link Buttons */}
@@ -43,14 +43,14 @@ export default function HomeContactCTA() {
               href="https://wa.me/917200146914?text=Hi%20AgniGrow%20team,%20I'd%20like%20to%20discuss%20a%20project%20for%20my%20business."
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-display font-bold text-xs sm:text-sm md:text-base border border-emerald-500/40 text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 transition-all text-center"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 rounded-full font-display font-bold text-xs sm:text-sm md:text-base border btn-whatsapp-outline transition-all text-center"
             >
               <span>💬</span> Chat On WhatsApp
             </a>
           </div>
 
           {/* Quick Studio Details */}
-          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 pt-8 border-t border-cream-10 text-xs sm:text-sm text-cream-40">
+          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-10 pt-8 border-t border-cream-10 text-xs sm:text-sm text-cream-60">
             <span>📍 Vaniyambadi, Tamil Nadu</span>
             <span>✉️ info@agnigrow.in</span>
             <span>⏱️ Mon–Sat: 9:30 AM – 7:00 PM</span>

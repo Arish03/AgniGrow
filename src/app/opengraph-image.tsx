@@ -123,7 +123,7 @@ export default function OpenGraphImage() {
               lineHeight: 1.3,
             }}
           >
-            High-Converting Websites, Brand Identity & WhatsApp Automation
+            High-Converting Websites, Brand Identity & AI Automation
           </div>
         </div>
 
@@ -161,7 +161,7 @@ export default function OpenGraphImage() {
               color: "#f4eee5",
             }}
           >
-            💬 WhatsApp CRM & Bots
+            🤖 AI Automation
           </div>
           <div
             style={{

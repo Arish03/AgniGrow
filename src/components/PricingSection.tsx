@@ -42,17 +42,17 @@ const TIERS = [
     id: "growth",
     name: "Full Digital Growth",
     badge: "Most Popular",
-    tagline: "High-Speed Website + WhatsApp CRM + Complete Brand Setup",
+    tagline: "High-Speed Website + AI Automation + Complete Brand Setup",
     priceINR: "₹49,999",
     period: "one-time investment",
     timeline: "18–21 Days Sprint",
     description:
-      "Everything your business needs to establish a world-class digital presence, capture leads automatically on WhatsApp, and outpace regional competitors.",
+      "Everything your business needs to establish a world-class digital presence, capture and qualify leads with AI automation, and outpace regional competitors.",
     features: [
       "Full Multi-Page Website (Up to 12 pages + dynamic CMS)",
       "Sub-second Load Times (< 1.0s LCP on mobile)",
-      "Official WhatsApp Business API Bot Setup",
-      "Automated 24/7 Lead Capture & Inquiry Workflow",
+      "Intelligent AI & WhatsApp Automation Setup",
+      "Automated 24/7 Lead Qualification & AI Triage",
       "Bilingual Support (Tamil & English)",
       "Complete Brand Identity: Typography, Vector Logos & Social Kit",
       "Conversion Tracking & Custom Analytics Dashboard",
@@ -63,7 +63,7 @@ const TIERS = [
       "60 Days Dedicated Post-Launch Support & Warranty",
     ],
     benefits: [
-      "Save 15+ hours/week with automated WhatsApp lead triage",
+      "Save 15+ hours/week with automated AI lead triage",
       "Capture evening and weekend leads with zero manual reception lag",
       "Command premium market pricing with a luxury visual presence",
       "100% code ownership with zero ongoing monthly platform fees",
@@ -123,8 +123,8 @@ const PILLARS = [
   },
   {
     num: "03",
-    title: "Frictionless WhatsApp CRM",
-    desc: "In India and regional business, customers prefer WhatsApp. We build automated lead intake, booking, and catalog inquiries right inside WhatsApp.",
+    title: "Intelligent AI Automation",
+    desc: "We deploy smart AI agents and automated workflows across web and messaging to qualify leads, book appointments, and triage customer inquiries 24/7.",
   },
   {
     num: "04",
@@ -148,7 +148,7 @@ const FAQS = [
   },
   {
     q: "Can we add custom features or modules?",
-    a: "Absolutely. Every business has unique needs. You can add extra features (such as payment gateways, custom CRM integrations, or specialized WhatsApp automations) or request a bespoke proposal.",
+    a: "Absolutely. Every business has unique needs. You can add extra features (such as payment gateways, custom CRM integrations, or specialized AI automations) or request a bespoke proposal.",
   },
   {
     q: "How fast can we launch?",
@@ -160,7 +160,7 @@ const FAQS = [
   },
   {
     q: "What's the difference between Starter and Growth?",
-    a: "Starter is a professional brochure website with basic brand setup — perfect for establishing online presence. Growth includes everything in Starter plus WhatsApp CRM automation, advanced analytics, bilingual support, full brand identity, and 60-day support. It's our most popular choice for businesses ready to scale.",
+    a: "Starter is a professional brochure website with basic brand setup — perfect for establishing online presence. Growth includes everything in Starter plus AI automation workflows, advanced analytics, bilingual support, full brand identity, and 60-day support. It's our most popular choice for businesses ready to scale.",
   },
 ];
 
@@ -412,7 +412,7 @@ export default function PricingSection() {
               href="https://wa.me/917200146914?text=Hi%20AgniGrow,%20I'd%20like%20to%20discuss%20pricing%20and%20plans."
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full font-display font-semibold text-xs sm:text-sm border border-emerald-500/40 text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 transition-all text-center"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full font-display font-semibold text-xs sm:text-sm border btn-whatsapp-outline transition-all text-center"
             >
               <span>💬</span> Chat Direct on WhatsApp
             </a>

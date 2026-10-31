@@ -169,7 +169,7 @@ export default function AboutPage() {
                   Yet for years, regional businesses were forced to choose between outdated freelance templates or overpriced metro agencies in Bangalore and Chennai who never took the time to understand their real workflow bottlenecks.
                 </p>
                 <p>
-                  We founded <strong className="text-cream">AgniGrow</strong> to permanently close that gap. We bring top-tier web engineering, clean design systems, and automated WhatsApp CRM solutions directly to the doorstep of regional businesses.
+                  We founded <strong className="text-cream">AgniGrow</strong> to permanently close that gap. We bring top-tier web engineering, clean design systems, and intelligent AI automation solutions directly to the doorstep of regional businesses.
                 </p>
               </div>
             </div>
@@ -298,7 +298,7 @@ export default function AboutPage() {
                 href="https://wa.me/917200146914"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-full font-display font-bold text-xs sm:text-sm border border-emerald-500/40 text-emerald-400 bg-emerald-500/10 hover:bg-emerald-500/20 transition-all flex items-center justify-center gap-2 text-center"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-full font-display font-bold text-xs sm:text-sm border btn-whatsapp-outline transition-all flex items-center justify-center gap-2 text-center"
               >
                 <span>💬</span> WhatsApp Us
               </a>

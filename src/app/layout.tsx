@@ -41,23 +41,57 @@ export const metadata: Metadata = {
     template: "%s | AgniGrow",
   },
   description:
-    "AgniGrow is Your Digital Growth Partner in Vaniyambadi, Tamil Nadu. We engineer high-converting Next.js websites, brand identities, WhatsApp CRM automation, and custom software systems for regional and export businesses.",
+    "AgniGrow is Your Digital Growth Partner in Vaniyambadi, Tamil Nadu. We engineer high-converting Next.js websites, brand identities, AI automation, and custom software systems for regional and export businesses.",
   applicationName: "AgniGrow",
   category: "technology",
   classification: "Digital Agency, Web Development, Automation",
   keywords: [
+    // Brand & Agency Identity
     "AgniGrow",
     "Agni Grow",
+    "Agni Digital Agency",
     "Your Digital Growth Partner",
+    // Regional & Local Search (Vaniyambadi, Ambur, Tirupattur, Vellore, Tamil Nadu)
     "Digital Agency Vaniyambadi",
     "Web Development Vaniyambadi",
+    "Website Design Vaniyambadi",
+    "Web Development Ambur",
+    "Website Design Tirupattur",
+    "Digital Agency Vellore",
+    "Web Designers Ranipet",
+    "Software Company Vaniyambadi",
+    "IT Company Vaniyambadi",
     "Website Design Tamil Nadu",
     "Branding Agency Vaniyambadi",
+    "Local SEO Services Tamil Nadu",
+    "Google Business Profile Optimization Vaniyambadi",
+    "Google Maps Listing Ranking Tamil Nadu",
+    // Engineering & Web Development
+    "Next.js Web Development India",
+    "High-Speed Website Development",
+    "Custom Web Applications",
+    "E-commerce Website Development Tirupattur",
+    "Responsive Mobile Web Design",
+    // AI Automation & Intelligent Workflows
+    "AI Automation Agency Tamil Nadu",
+    "AI Automation India",
+    "AI Agents for Small Business",
+    "Automated Lead Qualification",
     "WhatsApp Automation India",
     "WhatsApp Business API Tamil Nadu",
-    "Leather Export Website Vaniyambadi",
-    "E-commerce Development Tirupattur",
+    "WhatsApp CRM Chatbots",
+    // Bespoke Software & POS Billing
     "Custom Software Solutions",
+    "Custom ERP Development Tamil Nadu",
+    "Billing and Invoicing Software Vaniyambadi",
+    "Cloud POS Systems India",
+    "Thermal Receipt Printing Software",
+    // Regional Industries & Export Niches
+    "Leather Export Website Vaniyambadi",
+    "Leather Goods Catalog Website",
+    "Shoe Manufacturer Web Design",
+    "B2B Industrial Export Web Portals",
+    "International Export Websites India",
   ],
   authors: [
     { name: "Arish Srinivasan", url: "https://www.arishsrinivasan.in/" },
@@ -84,7 +118,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AgniGrow — Your Digital Growth Partner",
     description:
-      "Your Digital Growth Partner. Transform your business with cutting-edge digital experiences, high-converting Next.js websites, and automated WhatsApp growth systems.",
+      "Your Digital Growth Partner. Transform your business with cutting-edge digital experiences, high-converting Next.js websites, and intelligent AI automation workflows.",
     url: "https://agnigrow.in",
     siteName: "AgniGrow",
     locale: "en_IN",
@@ -103,7 +137,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AgniGrow — Your Digital Growth Partner",
     description:
-      "Your Digital Growth Partner — High-speed websites, branding, and WhatsApp CRM systems crafted to ignite business growth.",
+      "Your Digital Growth Partner — High-speed websites, branding, and AI automation systems crafted to ignite business growth.",
     images: ["/opengraph-image"],
   },
   alternates: {
@@ -128,7 +162,7 @@ const jsonLd = {
   logo: "https://agnigrow.in/icon.svg",
   url: "https://agnigrow.in",
   description:
-    "AgniGrow is a premier full-stack digital agency specializing in Next.js web development, official WhatsApp CRM automation, brand identity, and bespoke POS systems for regional businesses and export manufacturers in Tamil Nadu.",
+    "AgniGrow is a premier full-stack digital agency specializing in Next.js web development, intelligent AI automation, brand identity, and bespoke POS systems for regional businesses and export manufacturers in Tamil Nadu.",
   telephone: "+91-72001-46914",
   email: "info@agnigrow.in",
   priceRange: "₹₹",
@@ -168,10 +202,24 @@ const jsonLd = {
     { "@type": "City", name: "Tirupattur" },
     { "@type": "City", name: "Vellore" },
     { "@type": "City", name: "Ranipet" },
+    { "@type": "City", name: "Hosur" },
+    { "@type": "City", name: "Krishnagiri" },
     { "@type": "City", name: "Chennai" },
     { "@type": "AdministrativeArea", name: "Tamil Nadu" },
     { "@type": "Country", name: "India" },
   ],
+  knowsAbout: [
+    "Next.js Web Engineering & High-Speed Performance",
+    "AI Automation & Intelligent Agent Workflows",
+    "WhatsApp Business Cloud API Integration",
+    "Brand Identity & Luxury Export Packaging Design",
+    "Custom Cloud ERP & Thermal POS Billing Software",
+    "Local SEO & Google Business Profile Ranking",
+    "Leather Goods & Industrial B2B Export Web Portals",
+    "Mobile-First Responsive UI/UX Design",
+  ],
+  keywords:
+    "Digital Agency Vaniyambadi, Web Development Vaniyambadi, Web Development Ambur, Website Design Tirupattur, AI Automation Tamil Nadu, WhatsApp Automation India, Custom Software Vaniyambadi, Local SEO Tamil Nadu, Leather Export Website",
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "AgniGrow Digital Solutions",
@@ -189,9 +237,9 @@ const jsonLd = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Official WhatsApp CRM Automation",
+          name: "AI Automation & Workflows",
           description:
-            "Official Meta Cloud API lead funnels, 24/7 chatbots, and automated customer notifications.",
+            "Custom AI agents, automated customer triage, lead qualification, and multi-channel workflows.",
         },
       },
       {
@@ -210,6 +258,15 @@ const jsonLd = {
           name: "Brand Identity Design",
           description:
             "Vector logos, luxury export packaging, and digital style guides.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Google Business Profile & Local SEO",
+          description:
+            "Local search ranking, verified Google Maps listings, review management, and regional SEO.",
         },
       },
     ],

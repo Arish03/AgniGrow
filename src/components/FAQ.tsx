@@ -12,7 +12,7 @@ const FAQS: FAQItem[] = [
   {
     question: "How long does it typically take from kick-off to launch?",
     answer:
-      "Most standard business websites and landing pages go live within 7 to 14 business days. Complex e-commerce stores, custom billing software, or extensive WhatsApp CRM integrations usually take 2 to 4 weeks. We provide a guaranteed delivery timeline during our discovery call.",
+      "Most standard business websites and landing pages go live within 7 to 14 business days. Complex e-commerce stores, custom billing software, or extensive AI automation workflows usually take 2 to 4 weeks. We provide a guaranteed delivery timeline during our discovery call.",
   },
   {
     question: "How do your pricing and payment milestones work?",
@@ -25,9 +25,9 @@ const FAQS: FAQItem[] = [
       "Yes, completely! We configure custom corporate domains (.com, .in, etc.), high-speed global cloud hosting (Vercel/Cloudflare with 99.9% uptime), SSL encryption certificates, and professional Google Workspace or Zoho business emails.",
   },
   {
-    question: "How does the WhatsApp automation integration work?",
+    question: "How does the AI and WhatsApp automation integration work?",
     answer:
-      "We connect your website and contact channels directly to the official WhatsApp Business Cloud API. When a prospective client fills out a form or clicks your WhatsApp button, they get instant answers, catalog brochures, and quote PDFs automatically, while notifying your sales team immediately.",
+      "We integrate custom AI agents connected to the official WhatsApp Business Cloud API and web widgets. When a prospective client inquires, our AI agent delivers instant answers, catalog brochures, and quote estimates automatically, while alerting your sales team immediately.",
   },
   {
     question: "Do I get full ownership of the source code and brand files?",
